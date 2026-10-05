@@ -1,15 +1,34 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { SERVER_FNS, buildServerFnRequest, mapDbProductToMutationPayload } from '../src/lib/client.mjs';
+import {
+  SERVER_FNS,
+  buildServerFnRequest,
+  mapDbProductToMutationPayload,
+  serovalSerialize,
+  serovalDeserialize,
+} from '../src/lib/client.mjs';
 
 test('SERVER_FNS contient uniquement les endpoints Catalogue et Marketing autorisés', () => {
   assert.ok(SERVER_FNS.catalog.listProducts.id);
   assert.ok(SERVER_FNS.catalog.upsertProduct.id);
   assert.ok(SERVER_FNS.marketing.getOverview.id);
   assert.ok(SERVER_FNS.marketing.saveCampaignDraft.id);
-  // Vérifie qu'aucun endpoint de paiement ou de comptes maîtres n'est exposé
   assert.equal(SERVER_FNS.payments, undefined);
   assert.equal(SERVER_FNS.masterAccounts, undefined);
+});
+
+test('serovalSerialize et serovalDeserialize font un aller-retour fidèle', () => {
+  const original = {
+    data: {
+      segmentKey: 'all_consented',
+      count: 42,
+      active: true,
+      nested: ['a', 'b'],
+    },
+  };
+  const encoded = serovalSerialize(original);
+  const decoded = serovalDeserialize(encoded);
+  assert.deepEqual(decoded, original);
 });
 
 test('buildServerFnRequest construit les en-têtes TanStack Start et le payload GET/POST', () => {
@@ -22,7 +41,8 @@ test('buildServerFnRequest construit les en-têtes TanStack Start et le payload 
   assert.equal(getReq.method, 'GET');
   assert.equal(getReq.headers.Authorization, 'Bearer fake-jwt-token');
   assert.equal(getReq.headers['x-tsr-serverFn'], 'true');
-  assert.ok(getReq.url.startsWith('https://www.grafikaly.mg/_serverFn/a32abab4'));
+  assert.equal(getReq.headers['sec-fetch-site'], 'same-origin');
+  assert.ok(getReq.url.startsWith('https://grafikaly.mg/_serverFn/a32abab4'));
 
   const postReq = buildServerFnRequest(
     'https://www.grafikaly.mg',
@@ -32,7 +52,7 @@ test('buildServerFnRequest construit les en-têtes TanStack Start et le payload 
   );
   assert.equal(postReq.method, 'POST');
   assert.equal(postReq.headers['Content-Type'], 'application/json');
-  assert.deepEqual(JSON.parse(postReq.body), {
+  assert.deepEqual(serovalDeserialize(JSON.parse(postReq.body)), {
     data: { segmentKey: 'all_consented', segmentParams: {} },
   });
 });

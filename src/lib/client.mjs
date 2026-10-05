@@ -4,6 +4,167 @@ import { validateProductUpdate } from './catalog-validator.mjs';
 export const SUPABASE_URL = 'https://nzlfdrtujpwqpbrdsyqj.supabase.co';
 export const SUPABASE_ANON_KEY = 'sb_publishable_4jJc7v0l6qSVXciVZ4tS7Q_olVoiDFa';
 
+const SEROVAL_CONSTANTS = {
+  2: true,
+  3: false,
+  1: undefined,
+  0: null,
+  4: -0,
+  5: Infinity,
+  6: -Infinity,
+  7: NaN,
+};
+
+function escapeSerovalStr(str) {
+  let out = '';
+  for (let i = 0; i < str.length; i++) {
+    const ch = str[i];
+    switch (ch) {
+      case '"': out += '\\"'; break;
+      case '\\': out += '\\\\'; break;
+      case '\n': out += '\\n'; break;
+      case '\r': out += '\\r'; break;
+      case '\b': out += '\\b'; break;
+      case '\t': out += '\\t'; break;
+      case '\f': out += '\\f'; break;
+      case '<': out += '\\x3C'; break;
+      case '\u2028': out += '\\u2028'; break;
+      case '\u2029': out += '\\u2029'; break;
+      default: out += ch;
+    }
+  }
+  return out;
+}
+
+function unescapeSerovalStr(str) {
+  if (typeof str !== 'string' || !str.includes('\\')) return str;
+  return str.replace(/(\\\\|\\"|\\n|\\r|\\b|\\t|\\f|\\u2028|\\u2029|\\x3C)/g, (m) => {
+    switch (m) {
+      case '\\\\': return '\\';
+      case '\\"': return '"';
+      case '\\n': return '\n';
+      case '\\r': return '\r';
+      case '\\b': return '\b';
+      case '\\t': return '\t';
+      case '\\f': return '\f';
+      case '\\x3C': return '<';
+      case '\\u2028': return '\u2028';
+      case '\\u2029': return '\u2029';
+      default: return m;
+    }
+  });
+}
+
+export function serovalSerialize(rootValue) {
+  let nextRefId = 0;
+  const refs = new Map();
+
+  function walk(val) {
+    if (val === true) return { t: 2, s: 2 };
+    if (val === false) return { t: 2, s: 3 };
+    if (val === undefined) return { t: 2, s: 1 };
+    if (val === null) return { t: 2, s: 0 };
+    if (typeof val === 'number') return { t: 0, s: val };
+    if (typeof val === 'string') return { t: 1, s: escapeSerovalStr(val) };
+    if (typeof val === 'object') {
+      if (refs.has(val)) {
+        return { t: 4, i: refs.get(val) };
+      }
+      const id = nextRefId++;
+      refs.set(val, id);
+      if (Array.isArray(val)) {
+        return { t: 9, i: id, a: val.map(walk), o: 0 };
+      }
+      if (val instanceof Date) {
+        return { t: 5, i: id, s: val.toISOString() };
+      }
+      const keys = [];
+      const values = [];
+      for (const [k, v] of Object.entries(val)) {
+        if (v !== undefined) {
+          keys.push(escapeSerovalStr(k));
+          values.push(walk(v));
+        }
+      }
+      return { t: 10, i: id, p: { k: keys, v: values }, o: 0 };
+    }
+    throw new Error(`Type non supporté par serovalSerialize: ${typeof val}`);
+  }
+
+  return walk(rootValue);
+}
+
+export function serovalDeserialize(rootNode) {
+  if (!rootNode || typeof rootNode !== 'object') {
+    return rootNode;
+  }
+  if (rootNode.t && typeof rootNode.t === 'object' && typeof rootNode.t.t === 'number') {
+    rootNode = rootNode.t;
+  }
+  if (typeof rootNode.t !== 'number') {
+    return rootNode;
+  }
+  const refs = new Map();
+
+  function walk(node) {
+    if (!node || typeof node !== 'object') return node;
+    switch (node.t) {
+      case 0:
+        return Number(node.s);
+      case 1:
+        return unescapeSerovalStr(String(node.s));
+      case 2:
+        return SEROVAL_CONSTANTS[node.s];
+      case 3:
+        return BigInt(node.s);
+      case 4:
+        return refs.get(node.i);
+      case 5: {
+        const d = new Date(node.s);
+        if (node.i !== undefined) refs.set(node.i, d);
+        return d;
+      }
+      case 9: {
+        const arr = new Array(node.a.length);
+        if (node.i !== undefined) refs.set(node.i, arr);
+        for (let i = 0; i < node.a.length; i++) {
+          arr[i] = walk(node.a[i]);
+        }
+        return arr;
+      }
+      case 10:
+      case 11: {
+        const obj = {};
+        if (node.i !== undefined) refs.set(node.i, obj);
+        const keys = node.p?.k ?? [];
+        const vals = node.p?.v ?? [];
+        for (let i = 0; i < keys.length; i++) {
+          const rawKey = keys[i];
+          const k = typeof rawKey === 'string' ? unescapeSerovalStr(rawKey) : walk(rawKey);
+          obj[k] = walk(vals[i]);
+        }
+        return obj;
+      }
+      case 25: {
+        // Plugin node (ex: $TSR/Error)
+        const inner = {};
+        if (node.s && typeof node.s === 'object') {
+          for (const [k, v] of Object.entries(node.s)) {
+            inner[k] = walk(v);
+          }
+        }
+        const err = new Error(inner.message || `Plugin ${node.c}`);
+        Object.assign(err, inner);
+        return err;
+      }
+      default:
+        return node;
+    }
+  }
+
+  return walk(rootNode);
+}
+
 /**
  * Registre strictement limité aux Server Functions autorisées (Catalogue, Promos & Marketing).
  * Aucun endpoint de paiement, comptes maîtres ou gestion utilisateurs n'est inclus.
@@ -38,10 +199,16 @@ export const SERVER_FNS = Object.freeze({
 });
 
 export function buildServerFnRequest(baseUrl, fnDef, data, accessToken) {
-  let url = `${baseUrl.replace(/\/$/, '')}/_serverFn/${fnDef.id}`;
+  // Utilise le domaine canonique sans www. pour éviter qu'une redirection 301 ne supprime l'en-tête Authorization
+  const canonicalBase = baseUrl.replace(/\/$/, '').replace('://www.grafikaly.mg', '://grafikaly.mg');
+  let url = `${canonicalBase}/_serverFn/${fnDef.id}`;
   const headers = {
     'x-tsr-serverFn': 'true',
     Accept: 'application/json',
+    Origin: canonicalBase,
+    Referer: `${canonicalBase}/admin`,
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-mode': 'cors',
   };
   if (accessToken) {
     headers.Authorization = `Bearer ${accessToken}`;
@@ -49,7 +216,7 @@ export function buildServerFnRequest(baseUrl, fnDef, data, accessToken) {
 
   if (fnDef.method === 'GET') {
     if (data !== undefined) {
-      const payload = JSON.stringify({ data });
+      const payload = JSON.stringify({ t: serovalSerialize({ data }), f: 127, m: [] });
       const qs = new URLSearchParams({ payload }).toString();
       url += `?${qs}`;
     }
@@ -57,7 +224,9 @@ export function buildServerFnRequest(baseUrl, fnDef, data, accessToken) {
   }
 
   headers['Content-Type'] = 'application/json';
-  const body = JSON.stringify(data !== undefined ? { data } : {});
+  const body = JSON.stringify(
+    data !== undefined ? { t: serovalSerialize({ data }), f: 127, m: [] } : {}
+  );
   return { url, method: 'POST', headers, body };
 }
 
@@ -159,7 +328,6 @@ export class GrafikalyAdminClient {
     this.accessToken = session.access_token;
     this.user = session.user;
 
-    // Récupérer les rôles de l'utilisateur
     const rolesRes = await fetch(
       `${SUPABASE_URL}/rest/v1/user_roles?select=role&user_id=eq.${this.user.id}`,
       {
@@ -196,12 +364,12 @@ export class GrafikalyAdminClient {
     if (!res.ok) {
       throw new Error(`Erreur ServerFn ${fnDef.id.slice(0, 8)} (${res.status}): ${text}`);
     }
-    try {
-      const parsed = JSON.parse(text);
-      return parsed?.result !== undefined ? parsed.result : parsed;
-    } catch {
-      return text;
+    const parsed = JSON.parse(text);
+    const decoded = serovalDeserialize(parsed);
+    if (decoded?.error) {
+      throw decoded.error instanceof Error ? decoded.error : new Error(JSON.stringify(decoded.error));
     }
+    return decoded?.result !== undefined ? decoded.result : decoded;
   }
 
   async restSelect(table, query = 'select=*') {
