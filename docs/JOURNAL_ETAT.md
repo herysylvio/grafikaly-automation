@@ -10,9 +10,10 @@
 | :--- | :--- | :--- | :--- |
 | **1. Audit Global (Site, Catalogue, Admin, CRM)** | ✅ Terminé | [01-audit-complet-et-plan-30j.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/01-audit-complet-et-plan-30j.md) | Exploiter les conclusions dans les discussions dédiées |
 | **2. Benchmark Prix Officiels & Psychologie Locale (28 offres)** | ✅ Terminé | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) | Appliquer les prix d'ancrage (`compare_at_price_mga`) et le copywriting en Ariary/jour |
-| **3. Architecture & Plan du Copilote Admin (CLI)** | ✅ Validé | [2026-10-02-copilote-admin-design.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/plans/2026-10-02-copilote-admin-design.md) & [2026-10-02-copilote-admin-plan.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/plans/2026-10-02-copilote-admin-plan.md) | Configurer `.env` + Coder les 5 micro-tâches TDD + Faire le `backup-all` initial |
+| **3. Architecture & Outil CLI Copilote Admin** | ✅ Code & Tests (10/10) prêts | [2026-10-02-copilote-admin-plan.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/plans/2026-10-02-copilote-admin-plan.md) & [src/cli.mjs](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/cli.mjs) | Enregistrer `.env` + Exécuter `verify-auth` et `backup-all` |
 | **4. Optimisation Catalogue, Prix d'ancrage & Combos** | ⏳ Prêt à démarrer | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) | Mettre à jour les prix barrés, créer la catégorie IA, activer `promo_code_enabled` sur les produits phares |
-| **5. Stratégie Emailing & Automatisations (J-7, J-3, J+1)** | ⏳ Prêt à démarrer | [01-audit-complet-et-plan-30j.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/01-audit-complet-et-plan-30j.md) | Auditer les segments réels, préparer les brouillons d'emails et simuler (`dryRun: true`) les relances d'expiration |
+| **5. Stratégie Emailing & Automatisations (J-7, J-3, J+1)** | 🔄 En cours ([Discussion Email Marketing](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7)) | [01-audit-complet-et-plan-30j.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/01-audit-complet-et-plan-30j.md) | Cadrer l'architecture complète de l'Email Marketing (Automatisations, Segments, Séquences, Copywriting Malgache/Ariary, Codes Promo) |
+| **6. Stratégie Marketing & Automatisation Facebook** | 🔄 En cours ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) | [01-audit-complet-et-plan-30j.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/01-audit-complet-et-plan-30j.md) & [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) | Cadrer l'écosystème Facebook (Contenu, Ads, Automatisation Messenger/Commentaires/Publication) + Synergie Emailing |
 
 ---
 
@@ -20,10 +21,11 @@
 
 Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`c:\Users\sylvi\DEV\GRAFIKALY`). Voici comment les découper proprement si tu le souhaites :
 
-- **Discussion #1 (Fondatrice — `347c4a3c-3729-41b8-9897-bf2eaa1ae215`)** : Audit initial, Benchmark des prix officiels, Conception de l'architecture Copilote Admin et mise en place de la mémoire partagée.
+- **Discussion #1 (Fondatrice — [`347c4a3c-3729-41b8-9897-bf2eaa1ae215`](conversation://347c4a3c-3729-41b8-9897-bf2eaa1ae215))** : Audit initial, Benchmark des prix officiels, Conception de l'architecture Copilote Admin et mise en place de la mémoire partagée.
 - **Discussion Technique / Connexion Admin** : Développement et exécution des scripts CLI (`src/`), connexion `.env` et sauvegardes (`backups/`).
 - **Discussion Catalogue, Pricing & Copywriting** : Travail produit par produit sur les prix d'ancrage barrés, les descriptions psychologiques (coût par jour en Ariary, aversion à la perte), les packs et les Order Bumps (`/admin/combos`).
-- **Discussion Marketing, Emailing & Rétention** : Rédaction des campagnes (en brouillon), configuration des automatisations de renouvellement d'abonnements, codes promo et ventes flash.
+- **Discussion Stratégie Email Marketing ([`5087f294-e94d-48d3-af5f-ec047c802fc7`](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7))** : Pilotage complet de `/admin/marketing`, `/admin/emails` et `/admin/codes-promo` (Automatisations Panier & Pré-renouvellement, Campagnes sur les 6 segments, Copywriting & Psychologie locale).
+- **Discussion Marketing & Automatisation Facebook ([`448d6684-25b0-4957-8ba2-b6f812e51e80`](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80))** : Stratégie d'acquisition et d'automatisation Facebook (posts, réponses commentaires/Messenger, conversion vers `grafikaly.mg` ou WhatsApp).
 
 ---
 
