@@ -1,0 +1,28 @@
+name: Facebook & Messenger Auto-Responder (Grafikaly)
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # Surveillance permanente 24h/24 et 7j/7 toutes les 15 minutes dans le Cloud GitHub
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # Déclenchement manuel possible à tout moment depuis l'onglet Actions
+
+jobs:
+  auto-respond-facebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code Grafikaly Copilote
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Exécuter le répondeur automatique Commentaires & Messenger
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: |
+          node src/facebook.mjs auto-respond --confirm

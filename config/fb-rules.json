@@ -1,0 +1,50 @@
+{
+  "supportKeywords": [
+    "marche pas", "marche plus", "problème", "probleme", "erreur",
+    "coupé", "coupe", "mot de passe incorrect", "remboursement", "arnaque", "tsy mandeha", "olana"
+  ],
+  "priceKeywords": [
+    "prix", "mp", "pv", "inbox", "combien", "ohatrinona", "otrinona", "firy", "info", "infos",
+    "detail", "détail", "dispo", "disponible", "mbola misy", "intéressé", "interesse", "mvola",
+    "orange money", "comment acheter", "ahoana", "tarif", "lien", "vidiny", "plan", "crédit", "credit", "abonnement"
+  ],
+  "publicReplyVariants": [
+    "Bonjour {{first_name}} 👋 C'est disponible immédiatement ! Je viens de vous envoyer le tarif en Ariary et le lien d'accès direct dans vos messages privés (Messenger) 📩",
+    "Salama {{first_name}} 😊 Je viens de vous envoyer tous les détails (prix en Ariary + paiement Mvola/Orange Money) directement en MP 📩",
+    "Bonjour {{first_name}} ✨ C'est bien en stock ! Vérifiez vos messages privés Messenger, je vous ai envoyé le lien direct vers la fiche produit 📩",
+    "Hello {{first_name}} 👋 Tous les tarifs et le lien de commande rapide en Ariary viennent de partir dans votre boîte Messenger 📩",
+    "Miarahaba {{first_name}} 😊 Mbola misy ! Efa nalefako ao amin'ny MP (Messenger) ny vidiny sy ny rohy hividianana azy mivantana 📩"
+  ],
+  "productKeywordMap": [
+    { "keywords": ["netflix smart tv", "smart tv", "netflix tv"], "slug": "netflix-smart-TV" },
+    { "keywords": ["netflix", "netflix pc", "netflix mobile", "netflix smartphone"], "slug": "netflix-smartphone-pc-uniquement" },
+    { "keywords": ["canva", "canva pro"], "slug": "canva-pro-education" },
+    { "keywords": ["prime video", "amazon prime", "prime"], "slug": "prime-video" },
+    { "keywords": ["spotify", "musique"], "slug": "spotify-premium" },
+    { "keywords": ["crunchyroll", "anime", "manga"], "slug": "crunchyroll" },
+    { "keywords": ["dramabox", "drama"], "slug": "dramabox-vip" },
+    { "keywords": ["duolingo", "anglais", "langue"], "slug": "duolingo-super" },
+    { "keywords": ["nordvpn", "vpn"], "slug": "nordvpn" },
+    { "keywords": ["claude", "claude pro", "anthropic"], "slug": "claude-pro-compte-partage" },
+    { "keywords": ["lovable", "vibe coding"], "slug": "lovable-pro" },
+    { "keywords": ["n8n", "automatisation"], "slug": "n8n-starter" },
+    { "keywords": ["framer"], "slug": "framer-pro" },
+    { "keywords": ["notion"], "slug": "notion-business" },
+    { "keywords": ["gamma"], "slug": "gamma-pro" },
+    { "keywords": ["descript"], "slug": "descript-creator" },
+    { "keywords": ["higgsfield", "sora", "kling", "génération vidéo", "video ia", "visuels plus rapides"], "slug": "higgsfield-pro" },
+    { "keywords": ["granola"], "slug": "granola-ai-business" },
+    { "keywords": ["wispr", "dictée"], "slug": "wispr-flow-pro" },
+    { "keywords": ["google ai", "gemini"], "slug": "google-ai-pro" },
+    { "keywords": ["stockage google", "google one", "google drive", "stockage saturé"], "slug": "stockage-google-extension" },
+    { "keywords": ["coursera", "certificat"], "slug": "coursera-pro" },
+    { "keywords": ["sales navigator"], "slug": "linkedin-sales-navigator-advanced" },
+    { "keywords": ["linkedin career"], "slug": "linkedin-premium-career" },
+    { "keywords": ["linkedin", "linkedin business"], "slug": "linkedin-premium-business" },
+    { "keywords": ["windows", "win 11", "win 10"], "slug": "licence-windows-pro" },
+    { "keywords": ["mcafee", "antivirus"], "slug": "mcafee-premium" },
+    { "keywords": ["gta vi", "gta 6", "ps5"], "slug": "gta-vi-ps5-pre-commande" },
+    { "keywords": ["site e-commerce", "site web", "creation de site", "création de site", "boutique en ligne", "vendez sur facebook"], "slug": "service-site-ecommerce" }
+  ],
+  "postProductMap": {}
+}

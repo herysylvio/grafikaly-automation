@@ -129,7 +129,7 @@ Support WhatsApp : {{whatsapp_url}}
 > [!TIP]
 > **Rappel fonctionnement technique :** Lorsque tu actives `pre_renewal` dans `/admin/marketing` > *Automations*, l'ancienne relance unique à J-3 (`subscription_reminder`) est automatiquement désactivée pour éviter les doublons. Note aussi que `pre_renewal_j30` ne s'envoie qu'aux abonnements longs (trimestriels/annuels ayant $\ge 30$ jours restants).
 
-#### Email 4 — `pre_renewal_j30` (J-30 avant échéance : Sérénité & Continuité pour les abonnements longs)
+#### Email 4 — `pre_renewal_j30` (J-30 avant échéance : Anticipation & Continuité pour les abonnements longs)
 - **Objet :** `Info abonnement : votre accès {{product_name}} arrive à échéance dans 30 jours`
 - **Contenu (`body`) :**
 ```text
@@ -137,11 +137,11 @@ Bonjour {{customer_name}},
 
 Nous espérons que vous profitez pleinement de votre abonnement {{product_name}} ({{variant_label}}).
 
-Ceci est un simple message d'anticipation : votre période actuelle arrivera à échéance le {{subscription_end_date}} (dans {{days_remaining}} jours).
+Ceci est un message d'anticipation : votre période actuelle arrivera à échéance le {{subscription_end_date}} (dans {{days_remaining}} jours).
 
-Comme Grafikaly ne pratique aucun prélèvement automatique surprise, vous restez 100 % maître de votre renouvellement.
+Pour rappel, le renouvellement s'effectue manuellement (par Mvola ou Orange Money) : pensez à prolonger votre accès avant la date d'échéance pour conserver votre place et éviter toute coupure.
 
-Si vous souhaitez sécuriser votre place pour la période suivante dès maintenant et éviter toute coupure d'accès :
+Si vous souhaitez sécuriser votre prochaine période dès maintenant :
 👉 Renouveler en 1 clic : {{renewal_url}}
 
 Besoin de passer sur une durée plus longue (3 mois, 6 mois ou 12 mois) pour économiser encore plus en Ariary ? Écrivez-nous sur WhatsApp : {{whatsapp_url}}

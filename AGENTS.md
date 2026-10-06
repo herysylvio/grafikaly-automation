@@ -50,3 +50,15 @@ Ne refais jamais un audit déjà réalisé. Consulte directement ces fichiers pr
    - **Catalogue & Prix** : Toujours sauvegarder un snapshot dans `backups/` et présenter un comparatif *Avant / Après* dans le chat avant d'appliquer après le "GO" de l'utilisateur.
    - **Emailing & Automatisations** : Toujours créer les campagnes en statut **`draft` (Brouillon)** et tester les automatisations avec **`dryRun: true`**. Ne jamais envoyer d'email massif en direct sans validation explicite.
 4. **Identifiants (`.env`)** : Ne jamais afficher ni demander le mot de passe en clair dans le chat. Lire uniquement via `c:\Users\sylvi\DEV\GRAFIKALY\.env`.
+
+---
+
+## 5. Règles Facebook Marketing & Visuels (Nano Banana)
+
+1. **Légendes Facebook organiques** :
+   - **Zéro prix affiché** et **zéro lien externe (`https://...`)** dans le texte de la publication pour maximiser la portée algorithmique et forcer les commentaires (*"INFO"*, *"PRIX"*, *"MP"*).
+   - **Focus 100% Outils IA & Productivité** (exclure les produits de streaming type Netflix, Spotify, Prime Video, Crunchyroll).
+   - **Règle de stock stricte** : Ne jamais publier ni répondre aux commentaires sur un produit actuellement indisponible (`availability === 'unavailable'` ou `is_active === false`).
+2. **Visuels Réseaux Sociaux** :
+   - Toujours suivre la compétence [`.agents/skills/visuels-nano-banana/SKILL.md`](file:///c:/Users/sylvi/DEV/GRAFIKALY/.agents/skills/visuels-nano-banana/SKILL.md) (template JSON 13 sections *Product Hero Shot* + génération via Nano Banana `generate_image` séquentielle avec logo officiel en référence + signature `www.grafikaly.mg`). Ne pas utiliser `canva:create-design`.
+

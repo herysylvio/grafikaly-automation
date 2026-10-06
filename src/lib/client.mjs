@@ -242,11 +242,48 @@ export function mapDbProductToMutationPayload(dbProduct, patch = {}) {
     ? [merged.digital_inventory]
     : [];
   const mainInv = invList.find((i) => !('variant_id' in i) || i.variant_id === null) ?? invList[0] ?? {};
-  const categoryIds = Array.isArray(merged.category_ids) && merged.category_ids.length > 0
-    ? merged.category_ids
-    : merged.category_id
-    ? [merged.category_id]
+
+  const fromRelCategories = Array.isArray(merged.product_categories)
+    ? merged.product_categories.map((c) => c.category_id).filter(Boolean)
     : [];
+  const categoryIds =
+    Array.isArray(merged.category_ids) && merged.category_ids.length > 0
+      ? merged.category_ids
+      : fromRelCategories.length > 0
+      ? fromRelCategories
+      : merged.category_id
+      ? [merged.category_id]
+      : [];
+
+  const rawPromos = Array.isArray(merged.promo_codes) ? merged.promo_codes : [];
+  const promoCodes = rawPromos
+    .filter((p) => (p.code ?? '').trim())
+    .map((p) => ({
+      ...(p.id ? { id: p.id } : {}),
+      code: p.code.trim(),
+      discountType: p.discountType ?? p.discount_type ?? 'percentage',
+      discountValue: Number(p.discountValue ?? p.discount_value) || 0,
+      endsAt: p.endsAt ?? p.ends_at ? new Date(p.endsAt ?? p.ends_at).toISOString() : null,
+      maxRedemptions:
+        p.maxRedemptions ?? p.max_redemptions ? Number(p.maxRedemptions ?? p.max_redemptions) : null,
+      oncePerCustomer: Boolean(p.oncePerCustomer ?? p.once_per_customer ?? true),
+      isActive: Boolean(p.isActive ?? p.is_active ?? true),
+    }));
+
+  const rawFaq = Array.isArray(merged.product_faq_items)
+    ? merged.product_faq_items
+    : Array.isArray(merged.product_faqs)
+    ? merged.product_faqs
+    : [];
+  const faq = [...rawFaq]
+    .sort((a, b) => (a.display_order ?? 0) - (b.display_order ?? 0))
+    .filter((f) => (f.question ?? '').trim() && (f.answer ?? '').trim())
+    .map((f, idx) => ({
+      ...(f.id ? { id: f.id } : {}),
+      question: f.question.trim(),
+      answer: f.answer.trim(),
+      displayOrder: idx,
+    }));
 
   return {
     id: merged.id,
@@ -265,22 +302,17 @@ export function mapDbProductToMutationPayload(dbProduct, patch = {}) {
     ...(merged.duration_days ? { durationDays: Number(merged.duration_days) } : {}),
     deliveryEta: merged.delivery_eta ?? '',
     postPurchaseInstructions: merged.post_purchase_instructions ?? '',
-    additionalInfo: merged.additional_info ?? '',
+    additionalInfo: merged.customer_info_label ?? merged.additional_info ?? '',
     promoBadge: merged.promo_badge ?? '',
     isFeatured: Boolean(merged.is_featured),
     isActive: Boolean(merged.is_active),
     singleUnitOnly: Boolean(merged.single_unit_only),
     promoCodeEnabled: Boolean(merged.promo_code_enabled),
-    promoCodes: Array.isArray(merged.promo_codes) ? merged.promo_codes : [],
+    promoCodes,
     displayOrder: Number(merged.display_order) || 0,
     metaTitle: merged.meta_title ?? '',
     metaDescription: merged.meta_description ?? '',
-    faq: (Array.isArray(merged.product_faqs) ? merged.product_faqs : []).map((f, idx) => ({
-      ...(f.id ? { id: f.id } : {}),
-      question: f.question,
-      answer: f.answer,
-      displayOrder: f.display_order ?? idx,
-    })),
+    faq,
     inventory: {
       mode: mainInv.mode ?? 'slots',
       ...(mainInv.total_units !== null && mainInv.total_units !== undefined
@@ -290,7 +322,7 @@ export function mapDbProductToMutationPayload(dbProduct, patch = {}) {
       ...(mainInv.daily_quota !== null && mainInv.daily_quota !== undefined
         ? { dailyQuota: Number(mainInv.daily_quota) }
         : {}),
-      lowThreshold: Number(mainInv.low_threshold) || 0,
+      lowThreshold: Number(mainInv.low_threshold ?? 2) || 0,
       status: mainInv.status ?? 'available',
       notes: mainInv.notes ?? '',
     },
