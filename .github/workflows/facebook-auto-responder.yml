@@ -8,17 +8,20 @@ on:
     - cron: '*/15 * * * *'
   workflow_dispatch: # Déclenchement manuel possible à tout moment depuis l'onglet Actions
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   auto-respond-facebook:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout du code Grafikaly Copilote
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js 24
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Exécuter le répondeur automatique Commentaires & Messenger
         env:

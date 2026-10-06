@@ -285,22 +285,33 @@ async function cmdComments(args) {
     }
 
     if (confirm) {
-      await callGraphApi(cfg, `/${act.comment.id}/comments`, {
-        method: 'POST',
-        body: { message: act.plan.publicReply },
-      });
+      let dmSent = false;
       if (act.plan.privateReply) {
         try {
-          await callGraphApi(cfg, `/${act.comment.id}/private_replies`, {
+          await callGraphApi(cfg, `/${realPageId}/messages`, {
             method: 'POST',
-            body: { message: act.plan.privateReply },
+            body: {
+              recipient: { comment_id: act.comment.id },
+              message: { text: act.plan.privateReply },
+            },
           });
+          dmSent = true;
+          console.log(`  📩 DM Private Reply envoyé avec succès pour ${act.comment.id}`);
         } catch (err) {
-          console.warn(`  ⚠️ Impossible d'envoyer le Private Reply sur ${act.comment.id}: ${err.message}`);
+          console.warn(`  ℹ️ DM direct non autorisé par le profil sur ${act.comment.id} (${err.message}) -> Bascule sur réponse publique avec lien direct.`);
         }
       }
-      await markAsProcessed(act.comment.id, { actionType: act.plan.actionType, productSlug: act.product.slug });
-      console.log(`  ✅ Réponse envoyée pour ${act.comment.id} (Pause anti-spam 1.8s...)`);
+
+      const publicMsgToSend = (dmSent || !act.plan.fallbackPublicReply)
+        ? act.plan.publicReply
+        : act.plan.fallbackPublicReply;
+
+      await callGraphApi(cfg, `/${act.comment.id}/comments`, {
+        method: 'POST',
+        body: { message: publicMsgToSend },
+      });
+      await markAsProcessed(act.comment.id, { actionType: act.plan.actionType, productSlug: act.product.slug, dmSent });
+      console.log(`  ✅ Réponse publique envoyée pour ${act.comment.id} (Pause anti-spam 1.8s...)`);
       await sleep(1800);
     }
   }

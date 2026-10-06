@@ -93,6 +93,7 @@ export function buildCommentActions({ comment, product, dryRun = true, variantIn
     dryRun: Boolean(dryRun),
     actionType: 'PUBLIC_AND_PRIVATE_REPLY',
     publicReply,
+    fallbackPublicReply: `Bonjour${nameSuffix} 👋 Voici le lien direct pour découvrir l'offre ${product.name} et commander via Mvola / Orange Money 👉 ${url} (ou cliquez sur "Envoyer un message" sur notre page pour échanger en privé 📩)`,
     privateReply:
       `Bonjour${nameSuffix} ! Voici les détails pour **${product.name}** sur Grafikaly :\n` +
       `✅ Tarif : Dès ${priceStr}${anchorText}\n` +
