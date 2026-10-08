@@ -60,3 +60,27 @@ test('buildCommentActions bascule en réponse publique avec lien si le commentai
   assert.equal(plan.privateReply, null);
   assert.match(plan.publicReply, /https:\/\/www\.grafikaly\.mg\/produit\/prime-video/);
 });
+
+test('buildCommentActions informe de la rupture de stock et redirige vers https://www.grafikaly.mg si le produit est indisponible', () => {
+  const comment = {
+    id: 'cmt_unavail',
+    message: 'Salama tompoko, saika hanao abonnement Claude svp',
+    created_time: new Date().toISOString(),
+    from: { name: 'Santatra Nomenjanahary' },
+  };
+  const product = {
+    name: 'Claude PRO | Compte partagé',
+    slug: 'claude-pro-compte-partage',
+    price_mga: 45000,
+    availability: 'unavailable',
+    is_active: true,
+  };
+
+  const plan = buildCommentActions({ comment, product, dryRun: true });
+  assert.equal(plan.actionType, 'OUT_OF_STOCK_REDIRECT');
+  assert.match(plan.publicReply, /rupture de stock/i);
+  assert.match(plan.publicReply, /https:\/\/www\.grafikaly\.mg/);
+  assert.match(plan.privateReply, /rupture de stock/i);
+  assert.match(plan.privateReply, /https:\/\/www\.grafikaly\.mg/);
+});
+

@@ -59,13 +59,18 @@ export function buildCommentActions({ comment, product, dryRun = true, variantIn
   const url = `https://www.grafikaly.mg${basePath}?utm_source=facebook&utm_medium=comment_dm`;
   const priceStr = `${formatMga(product.price_mga)} Ar`;
 
-  if (product.availability === 'unavailable') {
+  if (product.availability === 'unavailable' || product.is_active === false) {
     return {
       commentId: comment.id,
       dryRun: Boolean(dryRun),
-      actionType: 'OUT_OF_STOCK_WAITLIST',
-      publicReply: `Bonjour${nameSuffix} 👋 Toutes les places pour ${product.name} viennent d'être prises, mais vous pouvez rejoindre la liste d'attente prioritaire sur notre site ! Je vous ai envoyé le lien en MP 📩`,
-      privateReply: `Bonjour${nameSuffix} ! Actuellement ${product.name} est victime de son succès (stock complet). 👉 Inscrivez-vous gratuitement sur la liste d'attente ici pour être alerté dès l'ouverture d'une place : ${url}`,
+      actionType: 'OUT_OF_STOCK_REDIRECT',
+      publicReply: `Bonjour${nameSuffix} 👋 L'offre ${product.name} est actuellement en rupture de stock, mais vous pouvez consulter notre site web pour découvrir toutes nos offres disponibles 👉 https://www.grafikaly.mg`,
+      fallbackPublicReply: `Bonjour${nameSuffix} 👋 L'offre ${product.name} est actuellement en rupture de stock, mais vous pouvez consulter notre site web pour découvrir toutes nos offres disponibles 👉 https://www.grafikaly.mg`,
+      privateReply:
+        `Bonjour${nameSuffix} 👋\n\n` +
+        `Merci pour votre message ! L'offre **${product.name}** est actuellement en rupture de stock.\n\n` +
+        `✨ En attendant son retour, nous vous invitons à consulter notre site web pour découvrir toutes nos autres offres disponibles immédiatement :\n` +
+        `👉 https://www.grafikaly.mg`,
     };
   }
 

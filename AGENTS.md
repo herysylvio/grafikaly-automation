@@ -58,7 +58,7 @@ Ne refais jamais un audit déjà réalisé. Consulte directement ces fichiers pr
 1. **Légendes Facebook organiques** :
    - **Zéro prix affiché** et **zéro lien externe (`https://...`)** dans le texte de la publication pour maximiser la portée algorithmique et forcer les commentaires (*"INFO"*, *"PRIX"*, *"MP"*).
    - **Focus 100% Outils IA & Productivité** (exclure les produits de streaming type Netflix, Spotify, Prime Video, Crunchyroll).
-   - **Règle de stock stricte** : Ne jamais publier ni répondre aux commentaires sur un produit actuellement indisponible (`availability === 'unavailable'` ou `is_active === false`).
+   - **Règle de stock stricte** : Ne jamais publier de post pour un produit indisponible (`availability === 'unavailable'` ou `is_active === false`). En revanche, si un client demande en commentaire ou en message un produit en rupture de stock, lui répondre poliment que l'offre est en rupture de stock et l'inviter à consulter `https://www.grafikaly.mg` pour découvrir les offres disponibles.
 2. **Visuels Réseaux Sociaux** :
    - Toujours suivre la compétence [`.agents/skills/visuels-nano-banana/SKILL.md`](file:///c:/Users/sylvi/DEV/GRAFIKALY/.agents/skills/visuels-nano-banana/SKILL.md) (template JSON 13 sections *Product Hero Shot* + génération via Nano Banana `generate_image` séquentielle avec logo officiel en référence + signature `www.grafikaly.mg`). Ne pas utiliser `canva:create-design`.
 

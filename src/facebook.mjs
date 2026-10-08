@@ -266,8 +266,7 @@ async function cmdComments(args) {
 
       const cmtSlug = detectProductSlugFromText(cmt.message) || postSlug;
       const product = findProductBySlug(cmtSlug);
-      if (product.availability === 'unavailable' || product.is_active === false) {
-        console.log(`⏭️ [IGNORÉ - PRODUIT INDISPONIBLE SUR LE SITE] Commentaire ${cmt.id} (${product.name}) : "${cmt.message}"`);
+      if ((product.availability === 'unavailable' || product.is_active === false) && ageDays > 2) {
         continue;
       }
       const plan = buildCommentActions({ comment: cmt, product, dryRun: !confirm });
@@ -381,10 +380,7 @@ async function cmdMessages(args) {
     if (!detectedSlug) continue;
 
     const product = findProductBySlug(detectedSlug);
-    if (!product || product.availability === 'unavailable' || product.is_active === false) {
-      console.log(`⏭️ [IGNORÉ - PRODUIT INDISPONIBLE] Message ${lastMsg.id} (${product?.name || detectedSlug}) : "${text}"`);
-      continue;
-    }
+    if (!product) continue;
 
     const plan = buildCommentActions({
       comment: { id: lastMsg.id, message: text, from: lastMsg.from },
