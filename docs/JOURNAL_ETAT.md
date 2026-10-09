@@ -14,6 +14,7 @@
 | **4. Optimisation Catalogue, Prix d'ancrage & Combos** | ⏳ Prêt à démarrer | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) | Mettre à jour les prix barrés, créer la catégorie IA, activer `promo_code_enabled` sur les produits phares |
 | **5. Stratégie Emailing & Automatisations (J-7, J-3, J+1)** | 🔄 Brouillons & Codes injectés ([Discussion Email Marketing](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7)) | [03-strategie-email-marketing.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/03-strategie-email-marketing.md) | 4 codes promo + 5 campagnes `draft` en ligne. En attente du "GO" pour activer les 6 templates & 2 automatisations + `promo_code_enabled` |
 | **6. Stratégie Marketing & Automatisation Facebook** | ✅ Token Permanent ♾️ + 37/37 cmt traités ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) | [04-kit-facebook-ads-et-calendrier-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/04-kit-facebook-ads-et-calendrier-madagascar.md) & [src/facebook.mjs](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/facebook.mjs) | Valider ("GO") la publication/programmation de la vague de posts de relance Facebook |
+| **7. Demandes Spécifiques, Services Sur-Mesure (Sites Web) & SAV** | 🟢 Devis & PDF `DEM-00006` prêts ([Discussion Services & SAV](conversation://a784537d-8256-496a-b102-22dfc03959fd)) | [2026-10-08-proposition-fpas-dem-00006.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/2026-10-08-proposition-fpas-dem-00006.md) & [PROPOSITION_FPAS_DEM-00006.pdf](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/PROPOSITION_FPAS_DEM-00006.pdf) | Validation & envoi du PDF officiel 3 pages au client FPAS / Visuart Web (`DEM-00006`) |
 
 ---
 
@@ -25,6 +26,7 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
 - **Discussion Catalogue, Pricing & Copywriting** : Travail produit par produit sur les prix d'ancrage barrés, les descriptions psychologiques (coût par jour en Ariary, aversion à la perte), les packs et les Order Bumps (`/admin/combos`).
 - **Discussion Stratégie Email Marketing ([`5087f294-e94d-48d3-af5f-ec047c802fc7`](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7))** : Pilotage complet de `/admin/marketing`, `/admin/emails` et `/admin/codes-promo` (Base confirmée : **2 391 contacts**, Automatisations Panier & Pré-renouvellement, Campagnes sur les 6 segments).
 - **Discussion Marketing & Automatisation Facebook ([`448d6684-25b0-4957-8ba2-b6f812e51e80`](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80))** : Stratégie d'acquisition et d'automatisation Facebook (posts, réponses commentaires/Messenger, conversion vers `grafikaly.mg` ou WhatsApp).
+- **Discussion Services Sur-Mesure, Commandes Personnalisées & SAV ([`a784537d-8256-496a-b102-22dfc03959fd`](conversation://a784537d-8256-496a-b102-22dfc03959fd))** : Gestion des demandes spécifiques hors catalogue standard, suivi et exécution des services (Création de site e-commerce en 24h à `300 000 Ar`, services personnalisés) et traitement des réclamations / support client.
 
 ---
 
@@ -60,5 +62,10 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
     1. **Lovable Pro** (`Post ID: 939291282602301_122138524743200124`) : **Publié en direct (LIVE)** avec visuel Nano Banana + logo officiel Lovable.
     2. **Google AI Pro (Gemini Advanced + 2 To)** (`Photo ID: 122138524785200124`) : **Programmé** pour le **Mercredi 07/10/2026 à 11h30 (Mada)**.
     3. **Canva Pro + Magic Studio IA** (`Photo ID: 122138524881200124`) : **Programmé** pour le **Jeudi 08/10/2026 à 11h30 (Mada)**.
+  - **Surveillance Cloud 24h/24 & 7j/7 déployée sur GitHub Actions** (`https://github.com/herysylvio/grafikaly-automation`, workflow [`.github/workflows/facebook-auto-responder.yml`](file:///c:/Users/sylvi/DEV/GRAFIKALY/.github/workflows/facebook-auto-responder.yml) exécutant `node src/facebook.mjs auto-respond --confirm` toutes les 15 minutes).
+- **2026-10-09** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - **Publication en direct (LIVE) de GAMMA PRO** sur la Page Facebook Grafikaly (`Post ID: 939291282602301_122138824191200124`) avec visuel carré Nano Banana (`nb-04-gamma-pro.jpg`), légende sans prix ni lien externe orientée engagement ("Commentez GAMMA ou INFO").
+
+
 
 
