@@ -14,7 +14,7 @@
 | **4. Optimisation Catalogue, Prix d'ancrage & Combos** | ⏳ Prêt à démarrer | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) | Mettre à jour les prix barrés, créer la catégorie IA, activer `promo_code_enabled` sur les produits phares |
 | **5. Stratégie Emailing & Automatisations (J-7, J-3, J+1)** | 🔄 Brouillons & Codes injectés ([Discussion Email Marketing](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7)) | [03-strategie-email-marketing.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/03-strategie-email-marketing.md) | 4 codes promo + 5 campagnes `draft` en ligne. En attente du "GO" pour activer les 6 templates & 2 automatisations + `promo_code_enabled` |
 | **6. Stratégie Marketing & Automatisation Facebook** | ✅ Token Permanent ♾️ + 37/37 cmt traités ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) | [04-kit-facebook-ads-et-calendrier-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/04-kit-facebook-ads-et-calendrier-madagascar.md) & [src/facebook.mjs](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/facebook.mjs) | Valider ("GO") la publication/programmation de la vague de posts de relance Facebook |
-| **7. Demandes Spécifiques, Services Sur-Mesure (Sites Web) & SAV** | 🟢 Devis & PDF `DEM-00006` prêts ([Discussion Services & SAV](conversation://a784537d-8256-496a-b102-22dfc03959fd)) | [2026-10-08-proposition-fpas-dem-00006.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/2026-10-08-proposition-fpas-dem-00006.md) & [PROPOSITION_FPAS_DEM-00006.pdf](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/PROPOSITION_FPAS_DEM-00006.pdf) | Validation & envoi du PDF officiel 3 pages au client FPAS / Visuart Web (`DEM-00006`) |
+| **7. Demandes Spécifiques, Services Sur-Mesure (Sites Web) & SAV** | 🎯 Commande Pack V1 FPAS Confirmée (`2 150 000 Ar`) ([Discussion Services & SAV](conversation://a784537d-8256-496a-b102-22dfc03959fd)) | [DEVIS_ACTUALISE_FPAS_DEM-00006.pdf](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/DEVIS_ACTUALISE_FPAS_DEM-00006.pdf) & [2026-10-10-bon-de-commande-fpas-dem-00006.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/2026-10-10-bon-de-commande-fpas-dem-00006.md) | Client prêt à commander. Envoi du bon de commande actualisé + modèle Google Sheets pour déclenchement acompte 30% (`645 000 Ar`) |
 
 ---
 
@@ -65,6 +65,12 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
   - **Surveillance Cloud 24h/24 & 7j/7 déployée sur GitHub Actions** (`https://github.com/herysylvio/grafikaly-automation`, workflow [`.github/workflows/facebook-auto-responder.yml`](file:///c:/Users/sylvi/DEV/GRAFIKALY/.github/workflows/facebook-auto-responder.yml) exécutant `node src/facebook.mjs auto-respond --confirm` toutes les 15 minutes).
 - **2026-10-09** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
   - **Publication en direct (LIVE) de GAMMA PRO** sur la Page Facebook Grafikaly (`Post ID: 939291282602301_122138824191200124`) avec visuel carré Nano Banana (`nb-04-gamma-pro.jpg`), légende sans prix ni lien externe orientée engagement ("Commentez GAMMA ou INFO").
+- **2026-10-13** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - **Exclusion de Coursera Pro** (en rupture de stock / unavailable).
+  - Génération du visuel ultra-réaliste **Framer Pro** (`nb-05-framer-pro.jpg`) via Nano Banana respectant les 13 sections et signature `www.grafikaly.mg`.
+  - **Publication en direct (LIVE) de FRAMER PRO** sur la Page Facebook Grafikaly (`Photo ID: 122139341127200124`, `Post ID: 939291282602301_122139341163200124`).
+  - Mapping automatique configuré dans `config/fb-rules.json` pour la réponse automatique aux commentaires et DMs ("FRAMER", "INFO").
+  - Préparation des prochains posts disponibles : **Notion Business** (dès réinitialisation du quota Nano Banana) et **Granola AI Business / Descript Creator**.
 
 
 
