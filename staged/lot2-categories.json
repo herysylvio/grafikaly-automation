@@ -1,0 +1,67 @@
+[
+  {
+    "id": "8e041e36-eaa0-4813-bfdb-2402e82bb634",
+    "name": "Outils IA & Productivité",
+    "slug": "outils-ia",
+    "icon": "Sparkles",
+    "display_order": 1,
+    "description": "Accès aux meilleurs outils d'intelligence artificielle et de productivité pour booster votre travail à Madagascar.",
+    "meta_title": "Outils IA & Productivité à Madagascar | Grafikaly",
+    "meta_description": "Abonnements et accès aux meilleurs outils d'intelligence artificielle et de productivité, payables en Ariary par Mobile Money.",
+    "is_active": true
+  },
+  {
+    "id": "6b3cbf70-62d6-4aff-8ad6-97031da4161b",
+    "name": "Logiciels et licences",
+    "slug": "logiciels-licences",
+    "icon": "KeyRound",
+    "display_order": 2,
+    "description": "Licences numériques et clés d'activation pour vos logiciels de travail et de création.",
+    "meta_title": "Licences logicielles numériques | Grafikaly",
+    "meta_description": "Clés de licence et activations logicielles livrées par email, avec assistance en français.",
+    "is_active": true
+  },
+  {
+    "name": "Formation & Carrière",
+    "slug": "formation-carriere",
+    "icon": "GraduationCap",
+    "display_order": 3,
+    "description": "Formations certifiantes en ligne et abonnements professionnels pour accélérer votre carrière.",
+    "meta_title": "Formations & Carrière pro à Madagascar | Grafikaly",
+    "meta_description": "Abonnements Coursera Pro et LinkedIn Premium en Ariary par Mobile Money à Madagascar.",
+    "is_active": true
+  },
+  {
+    "id": "929a5054-3238-42d2-874c-21d616a44bf6",
+    "name": "Streaming vidéo",
+    "slug": "streaming-video",
+    "icon": "Clapperboard",
+    "display_order": 4,
+    "description": "Abonnements aux plateformes de films et séries, avec identifiants fournis ou activation sur votre compte.",
+    "meta_title": "Abonnements streaming vidéo à Madagascar | Grafikaly",
+    "meta_description": "Abonnements Netflix, Prime Video et autres plateformes de streaming, payables en Ariary par Mvola, Orange Money ou Airtel Money.",
+    "is_active": true
+  },
+  {
+    "id": "43db59de-51e4-4bb3-ae28-35ebedc5499d",
+    "name": "Divertissements",
+    "slug": "divertissements",
+    "icon": "Gamepad2",
+    "display_order": 5,
+    "description": "Musique, jeux vidéo et divertissements numériques au meilleur tarif à Madagascar.",
+    "meta_title": "Divertissements & Musique à Madagascar | Grafikaly",
+    "meta_description": "Abonnements Spotify Premium, jeux et divertissements en Ariary par Mobile Money.",
+    "is_active": true
+  },
+  {
+    "id": "1d2a02fc-84f7-4db0-9c8a-c2ee8a38624a",
+    "name": "Services digitaux",
+    "slug": "services-digitaux",
+    "icon": "Palette",
+    "display_order": 6,
+    "description": "Prestations numériques réalisées par notre équipe : création de sites, design, configuration.",
+    "meta_title": "Services digitaux sur mesure | Grafikaly",
+    "meta_description": "Design graphique, configuration de comptes et création de site e-commerce en 24h par l'équipe Grafikaly.",
+    "is_active": true
+  }
+]

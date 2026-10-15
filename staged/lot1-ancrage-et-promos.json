@@ -1,0 +1,221 @@
+[
+  {
+    "slug": "framer-pro",
+    "changes": {
+      "compare_at_price_mga": 1590000,
+      "promo_code_enabled": true,
+      "duration_label": "12 mois",
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "coursera-pro",
+    "changes": {
+      "compare_at_price_mga": 1760000,
+      "promo_code_enabled": true,
+      "duration_label": "12 mois",
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "lovable-pro",
+    "changes": {
+      "compare_at_price_mga": 1325000,
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "descript-creator",
+    "changes": {
+      "compare_at_price_mga": 1275000,
+      "promo_code_enabled": true,
+      "duration_label": "12 mois",
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "n8n-starter",
+    "changes": {
+      "compare_at_price_mga": 1190000,
+      "promo_code_enabled": true,
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "google-ai-pro",
+    "changes": {
+      "compare_at_price_mga": 1060000,
+      "promo_code_enabled": true,
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "gamma-pro",
+    "changes": {
+      "compare_at_price_mga": 955000,
+      "promo_code_enabled": true,
+      "duration_label": "12 mois",
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "granola-ai-business",
+    "changes": {
+      "compare_at_price_mga": 740000,
+      "promo_code_enabled": true,
+      "duration_label": "12 mois",
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "higgsfield-pro",
+    "changes": {
+      "compare_at_price_mga": 2495000,
+      "promo_code_enabled": true,
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "wispr-flow-pro",
+    "changes": {
+      "promo_code_enabled": true,
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "hostinger-business-3-en-1",
+    "changes": {
+      "compare_at_price_mga": 900000,
+      "promo_code_enabled": true,
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "duolingo-super",
+    "changes": {
+      "compare_at_price_mga": 370000,
+      "promo_code_enabled": true,
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "mcafee-premium",
+    "changes": {
+      "compare_at_price_mga": 175000,
+      "promo_code_enabled": true,
+      "duration_label": "12 mois",
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "licence-windows-pro",
+    "changes": {
+      "compare_at_price_mga": 150000,
+      "promo_code_enabled": true,
+      "duration_label": "Licence à vie"
+    }
+  },
+  {
+    "slug": "stockage-google-extension",
+    "changes": {
+      "compare_at_price_mga": 160000,
+      "promo_code_enabled": true,
+      "duration_days": 365
+    }
+  },
+  {
+    "slug": "spotify-premium",
+    "changes": {
+      "compare_at_price_mga": 75000,
+      "promo_code_enabled": true,
+      "duration_label": "03 / 06 / 12 mois"
+    }
+  },
+  {
+    "slug": "netflix-smartphone-pc-uniquement",
+    "changes": {
+      "compare_at_price_mga": 39000
+    }
+  },
+  {
+    "slug": "netflix-smart-TV",
+    "changes": {
+      "compare_at_price_mga": 45000,
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "prime-video",
+    "changes": {
+      "compare_at_price_mga": 30000,
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "crunchyroll",
+    "changes": {
+      "compare_at_price_mga": 32000,
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "dramabox-vip",
+    "changes": {
+      "compare_at_price_mga": 175000,
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "canva-pro-education",
+    "changes": {
+      "compare_at_price_mga": 59000,
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "nordvpn",
+    "changes": {
+      "compare_at_price_mga": 55000,
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "claude-pro-compte-partage",
+    "changes": {
+      "promo_code_enabled": true,
+      "duration_label": "01 mois"
+    }
+  },
+  {
+    "slug": "notion-business",
+    "changes": {
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "linkedin-premium-business",
+    "changes": {
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "linkedin-premium-career",
+    "changes": {
+      "promo_code_enabled": true
+    }
+  },
+  {
+    "slug": "linkedin-sales-navigator-advanced",
+    "changes": {
+      "promo_code_enabled": true,
+      "duration_days": 30
+    }
+  },
+  {
+    "slug": "gta-vi-ps5-pre-commande",
+    "changes": {
+      "promo_code_enabled": true,
+      "duration_label": "Pré-commande"
+    }
+  }
+]

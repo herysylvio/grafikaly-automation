@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "coursera-pro",
+    "changes": {
+      "category_slug": "formation-carriere"
+    }
+  },
+  {
+    "slug": "linkedin-premium-career",
+    "changes": {
+      "category_slug": "formation-carriere"
+    }
+  },
+  {
+    "slug": "linkedin-premium-business",
+    "changes": {
+      "category_slug": "formation-carriere"
+    }
+  },
+  {
+    "slug": "linkedin-sales-navigator-advanced",
+    "changes": {
+      "category_slug": "formation-carriere"
+    }
+  },
+  {
+    "slug": "stockage-google-extension",
+    "changes": {
+      "category_slug": "logiciels-licences"
+    }
+  },
+  {
+    "slug": "spotify-premium",
+    "changes": {
+      "category_slug": "divertissements"
+    }
+  },
+  {
+    "slug": "dramabox-vip",
+    "changes": {
+      "category_slug": "streaming-video"
+    }
+  },
+  {
+    "slug": "n8n-starter",
+    "changes": {
+      "category_slug": "outils-ia"
+    }
+  }
+]
