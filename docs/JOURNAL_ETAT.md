@@ -70,6 +70,10 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
   - Génération du visuel ultra-réaliste **Framer Pro** (`nb-05-framer-pro.jpg`) via Nano Banana respectant les 13 sections et signature `www.grafikaly.mg`.
   - **Publication en direct (LIVE) de FRAMER PRO** sur la Page Facebook Grafikaly (`Photo ID: 122139341127200124`, `Post ID: 939291282602301_122139341163200124`).
   - Mapping automatique configuré dans `config/fb-rules.json` pour la réponse automatique aux commentaires et DMs ("FRAMER", "INFO").
+- **2026-10-15** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - Génération du visuel carré Nano Banana ultra-réaliste **Notion Business** (`nb-06-notion-business.jpg`) avec branding Notion, interface Teamspaces et signature `www.grafikaly.mg`.
+  - **Publication en direct (LIVE) de NOTION BUSINESS + Notion AI** sur la Page Facebook Grafikaly (`Photo ID: 122139519519200124`, `Post ID: 939291282602301_122139519555200124`).
+  - Mapping automatique configuré dans `config/fb-rules.json` pour la qualification et réponse automatique aux commentaires/DMs ("NOTION", "INFO").
 - **2026-10-15** ([Discussion #1](conversation://347c4a3c-3729-41b8-9897-bf2eaa1ae215)) :
   - **Déploiement en Production du Lot 1 Catalogue sur Grafikaly (29/29 produits mis à jour avec succès)** après validation "GO" :
     - **Activation des codes promo (`promo_code_enabled: true`) sur 100% des produits actifs** : Débloque immédiatement les codes promo (`PANIER10`, `RETOUR10`, `BIENVENUE10`, `NETFLIX15`).
