@@ -27,3 +27,41 @@ export function computeProductDiff(currentProduct, patch) {
   }
   return { id: currentProduct.id, name: currentProduct.name, changes, merged: validated };
 }
+
+export function validateCategoryUpdate(currentCategory = {}, patch = {}) {
+  const merged = { ...currentCategory, ...patch };
+  if (!merged.name || !String(merged.name).trim()) {
+    throw new Error('Le nom de la catégorie est obligatoire.');
+  }
+  if (!merged.slug || !String(merged.slug).trim()) {
+    throw new Error('Le slug de la catégorie est obligatoire.');
+  }
+  return merged;
+}
+
+export function computeCategoryDiff(currentCategory, patch) {
+  const validated = validateCategoryUpdate(currentCategory, patch);
+  const changes = {};
+  for (const key of Object.keys(patch)) {
+    if (currentCategory[key] !== validated[key]) {
+      changes[key] = { from: currentCategory[key] ?? null, to: validated[key] };
+    }
+  }
+  return { id: currentCategory.id, name: currentCategory.name, changes, merged: validated };
+}
+
+export function mapCategoryToMutationPayload(category = {}, patch = {}) {
+  const merged = validateCategoryUpdate(category, patch);
+  return {
+    ...(merged.id ? { id: merged.id } : {}),
+    name: String(merged.name).trim(),
+    slug: String(merged.slug).trim(),
+    description: merged.description ?? null,
+    icon: merged.icon ?? null,
+    imageUrl: merged.imageUrl ?? merged.image_url ?? null,
+    displayOrder: Number(merged.displayOrder ?? merged.display_order ?? 0),
+    metaTitle: merged.metaTitle ?? merged.meta_title ?? null,
+    metaDescription: merged.metaDescription ?? merged.meta_description ?? null,
+    isActive: Boolean(merged.isActive ?? merged.is_active ?? true),
+  };
+}

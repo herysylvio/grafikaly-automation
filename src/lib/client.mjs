@@ -174,7 +174,8 @@ export const SERVER_FNS = Object.freeze({
     listProducts: { id: 'a32abab4650c5a3b5fef5d2e251b48ad14347a9b834661483829db6b8f34e74a', method: 'GET' },
     upsertProduct: { id: '8c3278b7370c2cbb8013ad58be8dfeedfad3c47249ca4ff1bd56081d34b05c92', method: 'POST' },
     listCategories: { id: '39a242dd7971318612879f4a40705a80ba1ba10c1dd3d7b24ac2c2cf1d07b777', method: 'GET' },
-    upsertCategory: { id: 'bb66ccc97856362c450eda99633a3df8328252ebbd822d25ca7f683035de20a4', method: 'POST' },
+    upsertCategory: { id: 'b8638af1ef4497781a0ef8b40ef93d1ef0a84f14d2db86396a1493e4817b01a4', method: 'POST' },
+    deleteCategory: { id: '5e2864b456d7c0394008da4a7c3868807115766a96ba38c11c7b38dd521d252f', method: 'POST' },
     listOffers: { id: '70a682ff02f730ddfb74fe386beb5d806bc49a2a52bee1ef841e1c6e1ac8a040', method: 'GET' },
     upsertOffer: { id: '35bf1edfe43d09f61ab039f2b20a007495fb4a8936806c880b6537cb10da512e', method: 'POST' },
   },
@@ -249,11 +250,11 @@ export function mapDbProductToMutationPayload(dbProduct, patch = {}) {
   const categoryIds =
     Array.isArray(merged.category_ids) && merged.category_ids.length > 0
       ? merged.category_ids
-      : fromRelCategories.length > 0
-      ? fromRelCategories
+      : patch.category_id
+      ? [patch.category_id]
       : merged.category_id
       ? [merged.category_id]
-      : [];
+      : fromRelCategories;
 
   const rawPromos = Array.isArray(merged.promo_codes) ? merged.promo_codes : [];
   const promoCodes = rawPromos

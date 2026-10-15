@@ -11,7 +11,7 @@
 | **1. Audit Global (Site, Catalogue, Admin, CRM)** | ✅ Terminé | [01-audit-complet-et-plan-30j.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/01-audit-complet-et-plan-30j.md) | Exploiter les conclusions dans les discussions dédiées |
 | **2. Benchmark Prix Officiels & Psychologie Locale (28 offres)** | ✅ Terminé | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) | Appliquer les prix d'ancrage (`compare_at_price_mga`) et le copywriting en Ariary/jour |
 | **3. Architecture & Outil CLI Copilote Admin** | ✅ Opérationnel & Connecté (`admin`) | [2026-10-02-copilote-admin-plan.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/plans/2026-10-02-copilote-admin-plan.md) & [src/cli.mjs](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/cli.mjs) | Prêt à exécuter les diff/apply Catalogue & les brouillons Marketing |
-| **4. Optimisation Catalogue, Prix d'ancrage & Combos** | ✅ Lot 1 Appliqué en Production (29/29 produits) | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) & [staged/lot1-ancrage-et-promos.json](file:///c:/Users/sylvi/DEV/GRAFIKALY/staged/lot1-ancrage-et-promos.json) | Préparer Lot 2 : Copywriting psychologique (Ariary/jour) pour les 21 fiches vides + Catégorie IA |
+| **4. Optimisation Catalogue, Prix d'ancrage & Combos** | ✅ Lots 1 & 2 Appliqués en Production (Prix barrés, Catégories & 0 orphelin) | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) & [staged/lot2-categories.json](file:///c:/Users/sylvi/DEV/GRAFIKALY/staged/lot2-categories.json) | Préparer Lot 3 : Copywriting psychologique (Ariary/jour) pour les 21 fiches fiches vides + Packs combos |
 | **5. Stratégie Emailing & Automatisations (J-7, J-3, J+1)** | 🔄 Brouillons & Codes injectés ([Discussion Email Marketing](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7)) | [03-strategie-email-marketing.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/03-strategie-email-marketing.md) | 4 codes promo + 5 campagnes `draft` en ligne. En attente du "GO" pour activer les 6 templates & 2 automatisations + `promo_code_enabled` |
 | **6. Stratégie Marketing & Automatisation Facebook** | ✅ Token Permanent ♾️ + 37/37 cmt traités ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) | [04-kit-facebook-ads-et-calendrier-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/04-kit-facebook-ads-et-calendrier-madagascar.md) & [src/facebook.mjs](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/facebook.mjs) | Valider ("GO") la publication/programmation de la vague de posts de relance Facebook |
 | **7. Demandes Spécifiques, Services Sur-Mesure (Sites Web) & SAV** | 🎯 Commande Pack V1 FPAS Confirmée (`2 150 000 Ar`) ([Discussion Services & SAV](conversation://a784537d-8256-496a-b102-22dfc03959fd)) | [DEVIS_ACTUALISE_FPAS_DEM-00006.pdf](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/DEVIS_ACTUALISE_FPAS_DEM-00006.pdf) & [2026-10-10-bon-de-commande-fpas-dem-00006.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/2026-10-10-bon-de-commande-fpas-dem-00006.md) | Client prêt à commander. Envoi du bon de commande actualisé + modèle Google Sheets pour déclenchement acompte 30% (`645 000 Ar`) |
@@ -76,6 +76,23 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
     - **Mise en place des prix barrés d'ancrage officiels (`compare_at_price_mga`)** basés sur les tarifs officiels convertis en Ariary (ex. *Framer Pro* ~~1 590 000 Ar~~ $\rightarrow$ 189 000 Ar, *Coursera Pro* ~~1 760 000 Ar~~ $\rightarrow$ 249 000 Ar, *Lovable Pro* ~~1 325 000 Ar~~ $\rightarrow$ 349 000 Ar, *Descript* ~~1 275 000 Ar~~ $\rightarrow$ 249 000 Ar, *Google AI Pro* ~~1 060 000 Ar~~ $\rightarrow$ 289 000 Ar).
     - **Résolution du bug « Durée manquante » (`duration_days: 365` / `duration_label: "12 mois"`)** sur 13 abonnements annuels pour activer les relances automatiques J-7 / J-3 / J-1 d'expiration.
     - Snapshot de sécurité pré-écriture sauvegardé dans `backups/2026-10-15T08-08-57-774Z-pre-catalog-apply.json`.
+  - **Déploiement en Production du Lot 2 Catégories & Rattachement des Produits Orphelins (100% réussi)** après validation "GO" :
+    - **Extension de la CLI Admin (`src/cli.mjs`)** : Ajout des commandes sécurisées `category-diff` et `category-apply --confirm` avec mapping TanStack Start vers `SERVER_FNS.catalog.upsertCategory` (`b8638af1...`) et `catalog.deleteCategory` (`5e2864b4...`). 24/24 tests unitaires au vert.
+    - **Restructuration stratégique des catégories** :
+      1. **Outils IA & Productivité** (`outils-ia`) hissée en **Ordre 1** (la vitrine technologique principale de Grafikaly avec 14 outils majeurs).
+      2. **Logiciels et licences** (`logiciels-licences`) en **Ordre 2** (6 produits).
+      3. **Formation & Carrière** (`formation-carriere`, icône `GraduationCap`, ID `2bf0c8c9-36f4-453f-9964-50387707bb5a`) créée en **Ordre 3**.
+      4. **Streaming vidéo** (`streaming-video`) en **Ordre 4** (5 produits).
+      5. **Divertissements** (`divertissements`, icône `Gamepad2`) en **Ordre 5** (7 produits).
+      6. **Services digitaux** (`services-digitaux`) en **Ordre 6**.
+    - **Rattachement immédiat des 8 produits orphelins / mal catégorisés** :
+      - *Coursera Pro* & *LinkedIn (Career, Business, Sales Navigator)* $\rightarrow$ Catégorie **Formation & Carrière** (désormais trouvables et filtrables instantanément sur `grafikaly.mg/boutique?categorie=formation-carriere`).
+      - *Stockage Google Extension* $\rightarrow$ **Logiciels et licences**.
+      - *Spotify Premium* $\rightarrow$ **Divertissements**.
+      - *DramaBox VIP* $\rightarrow$ **Streaming vidéo**.
+      - *n8n Starter* $\rightarrow$ **Outils IA & Productivité**.
+    - **Résultat : 0 produit orphelin restant en base (100 % du catalogue correctement classé)**.
+    - Snapshots de sécurité pré-écriture : `backups/2026-10-15T08-49-03-373Z-pre-category-apply.json` et `backups/2026-10-15T08-49-38-286Z-pre-catalog-apply.json`.
 
 
 
