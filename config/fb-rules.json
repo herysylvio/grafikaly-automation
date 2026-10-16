@@ -55,5 +55,12 @@
     "939291282602301_122138524881200124": "canva-pro-education",
     "939291282602301_122138524785200124": "google-ai-pro",
     "939291282602301_122138524743200124": "lovable-pro"
+  },
+  "stockOverrides": {
+    "coursera-pro": "unavailable",
+    "claude-pro-compte-partage": "unavailable",
+    "hostinger-business-3-en-1": "unavailable",
+    "stockage-google-extension": "unavailable"
   }
 }
+

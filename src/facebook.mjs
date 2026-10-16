@@ -25,7 +25,7 @@ const BENCHMARK_CATALOG = [
   { name: 'GRANOLA AI BUSINESS', slug: 'granola-ai-business', price_mga: 169000, compare_at_price_mga: 743600, duration_days: 365, availability: 'available', is_active: true },
   { name: 'WISPR FLOW PRO', slug: 'wispr-flow-pro', price_mga: 249000, compare_at_price_mga: 620000, duration_days: 365, availability: 'available', is_active: true },
   { name: 'GAMMA PRO', slug: 'gamma-pro', price_mga: 289000, compare_at_price_mga: 956000, duration_days: 365, availability: 'available', is_active: true },
-  { name: 'COURSERA PRO | 12 MOIS', slug: 'coursera-pro', price_mga: 249000, compare_at_price_mga: 1766000, duration_days: 365, availability: 'available', is_active: true },
+  { name: 'COURSERA PRO | 12 MOIS', slug: 'coursera-pro', price_mga: 249000, compare_at_price_mga: 1766000, duration_days: 365, availability: 'unavailable', is_active: true },
   { name: 'DRAMABOX VIP', slug: 'dramabox-vip', price_mga: 24500, compare_at_price_mga: 177000, duration_days: 30, availability: 'low_availability', is_active: true },
   { name: 'LINKEDIN PREMIUM BUSINESS', slug: 'linkedin-premium-business', price_mga: 129000, compare_at_price_mga: 531000, duration_days: 60, availability: 'available', is_active: true },
   { name: 'Licence WINDOWS PRO', slug: 'licence-windows-pro', price_mga: 39000, compare_at_price_mga: 150000, duration_days: 365, availability: 'available', is_active: true },
@@ -46,8 +46,18 @@ function loadRealCatalog() {
         const invs = p.digital_inventory || [];
         const hasAvailable = invs.some((i) => i.status === 'available' || i.status === 'low_availability' || i.status === 'on_demand');
         const allUnavailable = invs.length > 0 && invs.every((i) => i.status === 'unavailable');
-        const availability = !p.is_active || allUnavailable ? 'unavailable' : (hasAvailable ? invs[0].status : 'available');
+        let availability = !p.is_active || allUnavailable ? 'unavailable' : (hasAvailable ? invs[0].status : 'available');
         const bench = BENCHMARK_CATALOG.find((b) => b.slug.toLowerCase() === p.slug.toLowerCase());
+        let stockOverrides = {};
+        try {
+          const rules = JSON.parse(fsSync.readFileSync(path.resolve('config', 'fb-rules.json'), 'utf8'));
+          if (rules.stockOverrides) stockOverrides = rules.stockOverrides;
+        } catch {}
+        if (stockOverrides[p.slug]) {
+          availability = stockOverrides[p.slug];
+        } else if (bench?.availability === 'unavailable') {
+          availability = 'unavailable';
+        }
         return {
           name: p.name,
           slug: p.slug,
