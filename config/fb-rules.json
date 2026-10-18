@@ -43,10 +43,12 @@
     { "keywords": ["linkedin", "linkedin business"], "slug": "linkedin-premium-business" },
     { "keywords": ["windows", "win 11", "win 10"], "slug": "licence-windows-pro" },
     { "keywords": ["mcafee", "antivirus"], "slug": "mcafee-premium" },
-    { "keywords": ["gta vi", "gta 6", "ps5"], "slug": "gta-vi-ps5-pre-commande" },
+    { "keywords": ["capcut", "capcut pro", "montage video", "montage vidéo"], "slug": "capcut-pro" },
     { "keywords": ["site e-commerce", "site web", "creation de site", "création de site", "boutique en ligne", "vendez sur facebook"], "slug": "service-site-ecommerce" }
   ],
   "postProductMap": {
+    "939291282602301_122139838281200124": "capcut-pro",
+    "122139838281200124": "capcut-pro",
     "939291282602301_122139519555200124": "notion-business",
     "122139519519200124": "notion-business",
     "939291282602301_122139341163200124": "framer-pro",

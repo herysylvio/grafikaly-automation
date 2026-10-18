@@ -11,8 +11,8 @@
 | **1. Audit Global (Site, Catalogue, Admin, CRM)** | ✅ Terminé | [01-audit-complet-et-plan-30j.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/01-audit-complet-et-plan-30j.md) | Exploiter les conclusions dans les discussions dédiées |
 | **2. Benchmark Prix Officiels & Psychologie Locale (28 offres)** | ✅ Terminé | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) | Appliquer les prix d'ancrage (`compare_at_price_mga`) et le copywriting en Ariary/jour |
 | **3. Architecture & Outil CLI Copilote Admin** | ✅ Opérationnel & Connecté (`admin`) | [2026-10-02-copilote-admin-plan.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/plans/2026-10-02-copilote-admin-plan.md) & [src/cli.mjs](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/cli.mjs) | Prêt à exécuter les diff/apply Catalogue & les brouillons Marketing |
-| **4. Optimisation Catalogue, Prix d'ancrage & Combos** | ✅ Lots 1, 2 & 3 Appliqués (Prix barrés, Catégories, 0 orphelin & 100% Copywriting) | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) & [staged/lot3-copywriting.json](file:///c:/Users/sylvi/DEV/GRAFIKALY/staged/lot3-copywriting.json) | Prochaine étape : Configuration des Packs & Combos Order Bumps (`/admin/combos`) |
-| **5. Stratégie Emailing & Automatisations (J-7, J-3, J+1)** | 🔄 Brouillons & Codes injectés ([Discussion Email Marketing](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7)) | [03-strategie-email-marketing.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/03-strategie-email-marketing.md) | 4 codes promo + 5 campagnes `draft` en ligne. En attente du "GO" pour activer les 6 templates & 2 automatisations + `promo_code_enabled` |
+| **4. Optimisation Catalogue, Prix d'ancrage & Combos** | ✅ Lots 1 à 4 Appliqués + 3 Nouveautés (CapCut Pro, Office 365, Figma Pro Edu — 31 produits actifs) | [02-benchmark-prix-et-psychologie-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/02-benchmark-prix-et-psychologie-madagascar.md) & [staged/lot4-combos-and-bumps.json](file:///c:/Users/sylvi/DEV/GRAFIKALY/staged/lot4-combos-and-bumps.json) | Catalogue & Combos 100% sécurisés et optimisés en production. |
+| **5. Stratégie Emailing & Automatisations (J-7, J-3, J+1)** | ✅ 100% Déployé & Opérationnel ([Discussion Email Marketing](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7)) | [03-strategie-email-marketing.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/03-strategie-email-marketing.md) | 4 codes promo + 5 campagnes en brouillon + 6 modèles d'emails mis à jour + 2 automatisations actives (panier H+1/J+1/J+3 & pré-renouvellement J-7/J-1 sans J-30). |
 | **6. Stratégie Marketing & Automatisation Facebook** | ✅ Token Permanent ♾️ + 37/37 cmt traités ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) | [04-kit-facebook-ads-et-calendrier-madagascar.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/contexte/04-kit-facebook-ads-et-calendrier-madagascar.md) & [src/facebook.mjs](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/facebook.mjs) | Valider ("GO") la publication/programmation de la vague de posts de relance Facebook |
 | **7. Demandes Spécifiques, Services Sur-Mesure (Sites Web) & SAV** | 🎯 Commande Pack V1 FPAS Confirmée (`2 150 000 Ar`) ([Discussion Services & SAV](conversation://a784537d-8256-496a-b102-22dfc03959fd)) | [DEVIS_ACTUALISE_FPAS_DEM-00006.pdf](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/DEVIS_ACTUALISE_FPAS_DEM-00006.pdf) & [2026-10-10-bon-de-commande-fpas-dem-00006.md](file:///c:/Users/sylvi/DEV/GRAFIKALY/docs/propositions/2026-10-10-bon-de-commande-fpas-dem-00006.md) | Client prêt à commander. Envoi du bon de commande actualisé + modèle Google Sheets pour déclenchement acompte 30% (`645 000 Ar`) |
 
@@ -74,6 +74,11 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
   - Génération du visuel carré Nano Banana ultra-réaliste **Notion Business** (`nb-06-notion-business.jpg`) avec branding Notion, interface Teamspaces et signature `www.grafikaly.mg`.
   - **Publication en direct (LIVE) de NOTION BUSINESS + Notion AI** sur la Page Facebook Grafikaly (`Photo ID: 122139519519200124`, `Post ID: 939291282602301_122139519555200124`).
   - Mapping automatique configuré dans `config/fb-rules.json` pour la qualification et réponse automatique aux commentaires/DMs ("NOTION", "INFO").
+- **2026-10-18** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - **Arrivée de CAPCUT PRO en stock** (`capcut-pro` à 29 000 Ar, 50 slots disponibles en base Supabase).
+  - Génération du visuel ultra-réaliste **CapCut Pro** (`nb-07-capcut-pro.jpg`) via Nano Banana (bureau de créateur, interfaces PC/mobile, néons cyan/magenta, headline "DONNEZ VIE À VOS VIDÉOS EN 4K" et signature `www.grafikaly.mg`).
+  - **Programmation officielle de la publication CAPCUT PRO** sur la Page Facebook Grafikaly pour le **Lundi 19/10/2026 à 09h00 (Heure Mada)** (`Photo/Post ID: 939291282602301_122139838281200124`).
+  - Intégration de CapCut Pro dans `src/facebook.mjs` et `config/fb-rules.json` (détection des mots-clés "capcut", "montage vidéo" et réponse automatique aux commentaires/DMs).
 - **2026-10-15** ([Discussion #1](conversation://347c4a3c-3729-41b8-9897-bf2eaa1ae215)) :
   - **Déploiement en Production du Lot 1 Catalogue sur Grafikaly (29/29 produits mis à jour avec succès)** après validation "GO" :
     - **Activation des codes promo (`promo_code_enabled: true`) sur 100% des produits actifs** : Débloque immédiatement les codes promo (`PANIER10`, `RETOUR10`, `BIENVENUE10`, `NETFLIX15`).
@@ -107,4 +112,40 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
 
 
 
+
+  - **Déploiement en Production du Lot 4 Combos & Order Bumps (100% réussi — Zéro Rupture)** après validation "GO" :
+    - **Sécurisation absolue du stock (`combo_eligible`)** : Désactivation immédiate de l'éligibilité combo sur les 9 produits indisponibles, à la demande ou à stock critique (`HOSTINGER`, `Claude PRO`, `STOCKAGE GOOGLE`, `SPOTIFY`, `HIGGSFIELD`, `ElevenLabs`, `NordVPN 03m`, `NETFLIX Smart TV`, `McAfee`). Élimine tout risque d'overselling ou de commande impossible à honorer.
+    - **Déploiement de 15 Order Bumps stratégiques sur le Panier** :
+      - *Licence Windows 11 Pro à vie* (-25 % / `29 000 Ar`, stock illimité) proposée sur 7 produits clés (*Framer Pro*, *Gamma Pro*, *Notion Business*, *n8n Starter*, *Coursera Pro*, *LinkedIn Career*, *LinkedIn Business*).
+      - *Canva Pro Éducation* (-20 % / `11 500 Ar`, 36 places) proposé sur *Gamma Pro*, *Notion Business*, *Coursera Pro* et *Duolingo Super*.
+      - *Prime Video 1 mois* (-15 % / `16 500 Ar`, 11 places) proposé sur *Netflix Smartphone/PC*.
+      - *NordVPN 1 mois* (-20 % / `11 500 Ar`, 13 places) proposé sur *Netflix Smartphone/PC* et *Prime Video*.
+      - *Crunchyroll MegaFan* (-15 % / `12 000 Ar`, 4 places) proposé sur *Prime Video*.
+    - **Extension de la CLI Admin (`src/cli.mjs`)** : Ajout des commandes `combo-status`, `combo-diff` et `combo-apply --confirm` avec mapping TanStack Start vers `SERVER_FNS.combos` (`getBundleSettings`, `setProductEligibility`, `upsertProposition`, `deleteProposition`, `upsertTier`, `deleteTier`) et moteur de validation de stock [`src/lib/combos-validator.mjs`](file:///c:/Users/sylvi/DEV/GRAFIKALY/src/lib/combos-validator.mjs) (27/27 tests au vert).
+    - **Snapshot de sécurité pré-écriture sauvegardé** dans [`backups/2026-10-15T11-09-23-557Z-pre-combos-apply.json`](file:///c:/Users/sylvi/DEV/GRAFIKALY/backups/2026-10-15T11-09-23-557Z-pre-combos-apply.json).
+
+  - **Déploiement en Production du Kit Email Marketing Complet (100% réussi)** ([Discussion Email Marketing](conversation://5087f294-e94d-48d3-af5f-ec047c802fc7)) :
+    - **Création & Activation des 4 codes promo piliers** (`PANIER10`, `RETOUR10`, `BIENVENUE10`, et correction de la coquille `NETFLX15` sur `NETFLIX | SMARTPHONE/PC`).
+    - **Injection des 5 campagnes stratégiques en statut `draft`** dans `/admin/marketing` (`scheduledAt: null`, prêtes pour envoi ou test par l'utilisateur).
+    - **Mise à jour copywriting des 6 modèles d'emails d'automatisation** dans `/admin/emails` (`abandoned_cart_step_1..3`, `pre_renewal_j30`, `pre_renewal_j7`, `pre_renewal_j1`) en supprimant toute mention de « prélèvement automatique » et en ancrant sur le paiement manuel Mobile Money (Mvola / Orange Money).
+    - **Activation des 2 automatisations majeures** dans `marketing_automations` :
+      - `abandoned_cart` : Activée (`enabled: true`) avec 3 relances (H+1, J+1, J+3 avec code promo `PANIER10`).
+      - `pre_renewal` : Activée (`enabled: true`) avec **stricte exclusion de J-30** (`steps: [{ days_before: 7 }, { days_before: 1 }]`) pour garantir à 100% que les abonnés 1 mois (durée 30 jours) ne reçoivent jamais de relance anticipée à J-30 dès le jour de leur achat.
+    - **Mise à jour des campagnes (Retrait de Claude Pro)** : Suite à la décision d'arrêter la commercialisation de Claude Pro, toute mention de ce produit a été retirée des campagnes de relance marketing.
+  - **Création & Déploiement en Production de CAPCUT PRO, MICROSOFT OFFICE 365 et FIGMA PRO ÉDUCATION (100% réussi)** ([Discussion #1](conversation://347c4a3c-3729-41b8-9897-bf2eaa1ae215)) :
+    - **CapCut Pro (01 mois)** :
+      - **Visuel 3D Officiel** : `/api/public/media/catalog/b82e51b5-c02d-4b17-a90c-7850971e4d83.jpg`.
+      - **Fiche produit** : ID `d21d2ac4-5abc-4d4d-a75e-9e73783b8168`, slug `capcut-pro`, catégorie `Outils IA & Productivité`.
+      - **Tarification** : `29 000 Ar` (prix barré officiel ~~`49 000 Ar`~~, soit ~`965 Ar/jour`).
+      - **Spécifications** : Compte préactivé (`shared_credentials`), durée `30 jours`, `promo_code_enabled: true`, `combo_eligible: true`. Page live : `https://grafikaly.mg/produit/capcut-pro`.
+    - **Microsoft Office 365 (12 mois)** :
+      - **Visuel 3D Officiel** : `/api/public/media/catalog/bedf4f9d-266e-492b-af04-b80893ea1d33.jpg`.
+      - **Fiche produit** : ID `a55861f9-9a84-4178-bfa4-da2a306db06f`, slug `microsoft-office-365`, catégorie `Logiciels et licences`.
+      - **Tarification** : `125 000 Ar` (prix barré officiel ~~`370 000 Ar`~~, soit ~`340 Ar/jour`).
+      - **Spécifications** : 12 mois complets sur compte personnel Microsoft via invitation email (`email_invite`), incluant **1 To de stockage OneDrive**, applications Word, Excel, PowerPoint, Outlook, OneNote à jour sur 5 appareils en simultané, `promo_code_enabled: true`, `combo_eligible: true`. Page live : `https://grafikaly.mg/produit/microsoft-office-365`.
+    - **Figma Pro Éducation (24 mois)** :
+      - **Visuel 3D Officiel** : `/api/public/media/catalog/d0f9825f-d563-4fae-9c53-542262625090.jpg`.
+      - **Fiche produit** : ID `8565a471-caa2-4000-80db-ee5af1e788ab`, slug `figma-pro-edu`, catégorie `Outils IA & Productivité`.
+      - **Tarification** : `145 000 Ar` pour 24 mois (prix barré officiel ~~`1 450 000 Ar`~~, soit moins de ~`200 Ar/jour`).
+      - **Spécifications** : 24 mois sur compte personnel Figma via invitation email (`email_invite`), projets illimités, historique de versions illimité, bibliothèques partagées, FigJam inclus, `promo_code_enabled: true`, `combo_eligible: true`. Page live : `https://grafikaly.mg/produit/figma-pro-edu`.
 

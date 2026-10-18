@@ -17,6 +17,7 @@ const BENCHMARK_CATALOG = [
   { name: 'CRUNCHYROLL MEGAFAN', slug: 'crunchyroll', price_mga: 14500, compare_at_price_mga: 32200, duration_days: 30, availability: 'available', is_active: true },
   { name: 'DUOLINGO SUPER', slug: 'duolingo-super', price_mga: 98000, compare_at_price_mga: 371700, duration_days: 365, availability: 'available', is_active: true },
   { name: 'FRAMER PRO', slug: 'framer-pro', price_mga: 189000, compare_at_price_mga: 1593400, duration_days: 365, availability: 'available', is_active: true },
+  { name: 'CAPCUT PRO', slug: 'capcut-pro', price_mga: 29000, compare_at_price_mga: 49000, duration_days: 30, availability: 'available', is_active: true },
   { name: 'LOVABLE PRO', slug: 'lovable-pro', price_mga: 349000, compare_at_price_mga: 1327800, duration_days: 365, availability: 'low_availability', is_active: true },
   { name: 'NOTION BUSINESS', slug: 'notion-business', price_mga: 69000, compare_at_price_mga: 349000, duration_days: 90, availability: 'low_availability', is_active: true },
   { name: 'GOOGLE AI PRO', slug: 'google-ai-pro', price_mga: 289000, compare_at_price_mga: 1061700, duration_days: 365, availability: 'available', is_active: true },
