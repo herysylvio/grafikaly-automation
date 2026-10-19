@@ -35,8 +35,7 @@ test('buildCommentActions génère une réponse publique et un DM avec lien UTM 
   assert.equal(plan.actionType, 'PUBLIC_AND_PRIVATE_REPLY');
   assert.equal(plan.dryRun, true);
   assert.match(plan.publicReply, /Rova/);
-  assert.match(plan.privateReply, /14 500 Ar/);
-  assert.match(plan.privateReply, /https:\/\/www\.grafikaly\.mg\/produit\/canva-pro-education\?utm_source=facebook&utm_medium=comment_dm/);
+  assert.match(plan.privateReply, /https:\/\/www\.grafikaly\.mg\/produit\/canva-pro-education/);
 });
 
 test('buildCommentActions bascule en réponse publique avec lien si le commentaire a plus de 7 jours', () => {

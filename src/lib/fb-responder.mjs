@@ -84,9 +84,14 @@ export function buildCommentActions({ comment, product, dryRun = true, variantIn
     };
   }
 
-  const anchorText = product.compare_at_price_mga && product.compare_at_price_mga > product.price_mga
-    ? ` (au lieu de ~${formatMga(product.compare_at_price_mga)} Ar en tarif officiel)`
+  const isSpecialService = isServiceWeb;
+  const deliveryText = isSpecialService ? 'Site configuré et livré sous 24h' : 'Accès activé rapidement après validation';
+
+  const anchorText = (!isSpecialService && product.compare_at_price_mga && product.compare_at_price_mga > product.price_mga)
+    ? ` (au lieu de ~${formatMga(product.compare_at_price_mga)} Ar)`
     : '';
+
+  const cleanUrl = `https://www.grafikaly.mg${basePath}`;
 
   const variants = rules.publicReplyVariants;
   const idx = variantIndex !== null ? variantIndex % variants.length : Math.floor(Math.random() * variants.length);
@@ -98,12 +103,14 @@ export function buildCommentActions({ comment, product, dryRun = true, variantIn
     dryRun: Boolean(dryRun),
     actionType: 'PUBLIC_AND_PRIVATE_REPLY',
     publicReply,
-    fallbackPublicReply: `Bonjour${nameSuffix} 👋 Voici le lien direct pour découvrir l'offre ${product.name} et commander via Mvola / Orange Money 👉 ${url} (ou cliquez sur "Envoyer un message" sur notre page pour échanger en privé 📩)`,
+    fallbackPublicReply: `Bonjour${nameSuffix} 👋 Voici le lien direct pour découvrir l'offre ${product.name} et commander via Mvola / Orange Money 👉 ${cleanUrl} (ou écrivez-nous en MP pour échanger 📩)`,
     privateReply:
-      `Bonjour${nameSuffix} ! Voici les détails pour **${product.name}** sur Grafikaly :\n` +
-      `✅ Tarif : Dès ${priceStr}${anchorText}\n` +
-      `💳 Paiement 100 % local : Mvola ou Orange Money (sans carte bancaire)\n` +
-      `⚡ Livraison rapide : Accès activé en moins de 2h après validation\n` +
-      `👉 Commandez directement en 2 minutes ici : ${url}`,
+      `Bonjour${nameSuffix} 👋\n\n` +
+      `Voici les informations pour l'offre ${product.name} :\n\n` +
+      `💰 Tarif : À partir de ${priceStr}${anchorText}\n\n` +
+      `🇲🇬 Paiement simple : Mvola ou Orange Money (sans carte bancaire)\n\n` +
+      `⚡ ${deliveryText}\n\n` +
+      `👉 Découvrir tous les détails et commander :\n` +
+      `${cleanUrl}`,
   };
 }

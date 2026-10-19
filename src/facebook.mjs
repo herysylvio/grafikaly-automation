@@ -34,7 +34,7 @@ const BENCHMARK_CATALOG = [
   { name: 'HOSTINGER BUSINESS 3 en 1', slug: 'hostinger-business-3-en-1', price_mga: 489000, compare_at_price_mga: 902400, duration_days: 365, availability: 'unavailable', is_active: true },
   { name: 'STOCKAGE GOOGLE Extension', slug: 'stockage-google-extension', price_mga: 125000, compare_at_price_mga: 200000, duration_days: 365, availability: 'unavailable', is_active: true },
   { name: 'NordVPN', slug: 'nordvpn', price_mga: 14500, compare_at_price_mga: 45000, duration_days: 30, availability: 'available', is_active: true },
-  { name: 'Création de Site E-commerce en 24h', slug: 'service-site-ecommerce', price_mga: 349000, compare_at_price_mga: 1540000, duration_days: 365, availability: 'available', is_active: true }
+  { name: 'Création de Site E-commerce en 24h', slug: 'service-site-ecommerce', price_mga: 349000, compare_at_price_mga: null, duration_days: 365, availability: 'available', is_active: true }
 ];
 
 function loadRealCatalog() {
