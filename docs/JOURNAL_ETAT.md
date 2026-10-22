@@ -79,6 +79,10 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
   - Génération du visuel ultra-réaliste **CapCut Pro** (`nb-07-capcut-pro.jpg`) via Nano Banana (bureau de créateur, interfaces PC/mobile, néons cyan/magenta, headline "DONNEZ VIE À VOS VIDÉOS EN 4K" et signature `www.grafikaly.mg`).
   - **Programmation officielle de la publication CAPCUT PRO** sur la Page Facebook Grafikaly pour le **Lundi 19/10/2026 à 09h00 (Heure Mada)** (`Photo/Post ID: 939291282602301_122139838281200124`).
   - Intégration de CapCut Pro dans `src/facebook.mjs` et `config/fb-rules.json` (détection des mots-clés "capcut", "montage vidéo" et réponse automatique aux commentaires/DMs).
+- **2026-10-23** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - Génération du visuel carré Nano Banana ultra-réaliste **Granola AI Business** (`nb-08-granola-ai-business.jpg`) axé prise de notes de réunion automatique par IA, salle de conférence moderne, headline "FINI DE PRENDRE DES NOTES EN RÉUNION" et signature `www.grafikaly.mg`.
+  - **Programmation officielle de la publication GRANOLA AI BUSINESS** sur la Page Facebook Grafikaly pour le **Vendredi 23/10/2026 à 09h00 (Heure Mada)** (`Photo/Post ID: 939291282602301_122140246155200124`).
+  - Mapping automatique configuré dans `config/fb-rules.json` pour la qualification et réponse automatique aux commentaires/DMs ("GRANOLA", "INFO").
 - **2026-10-15** ([Discussion #1](conversation://347c4a3c-3729-41b8-9897-bf2eaa1ae215)) :
   - **Déploiement en Production du Lot 1 Catalogue sur Grafikaly (29/29 produits mis à jour avec succès)** après validation "GO" :
     - **Activation des codes promo (`promo_code_enabled: true`) sur 100% des produits actifs** : Débloque immédiatement les codes promo (`PANIER10`, `RETOUR10`, `BIENVENUE10`, `NETFLIX15`).
