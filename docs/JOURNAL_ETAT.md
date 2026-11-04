@@ -85,8 +85,9 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
   - Mapping automatique configuré dans `config/fb-rules.json` pour la qualification et réponse automatique aux commentaires/DMs ("GRANOLA", "INFO").
 - **2026-11-04** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
   - **Lancement officiel de BLACK NOVEMBER** étalé sur 4 semaines thématiques.
-  - Génération du visuel ultra-luxueux **Black November - Semaine 1 Créateurs & IA** (`nb-09-black-november-week1.jpg`) via Nano Banana avec branding 3D or/chrome, split-screen CapCut Pro / Canva Pro, badges en verre dépoli et signature `www.grafikaly.mg`.
-  - **Publication LIVE** sur la Page Facebook Grafikaly (`Photo ID: 122141519613200124`, `Post ID: 939291282602301_122141519649200124`).
+  - Recalibrage psychologique immédiat : suppression du badge "-85%" (ancrage dollar irréaliste) au profit d'un ancrage crédible sur les prix réguliers Grafikaly avec badges **« Pack Duo Spécial »** et **« Offre Spéciale Novembre »**.
+  - Génération du visuel v2 Nano Banana (`nb-09-black-november-week1-v2.jpg`) avec branding 3D or/chrome, split-screen CapCut Pro / Canva Pro, badges en verre dépoli et signature `www.grafikaly.mg`.
+  - **Publication LIVE v2** sur la Page Facebook Grafikaly (`Photo ID: 122141520327200124`, `Post ID: 939291282602301_122141520363200124`).
   - Intégration des mots-clés `"black"`, `"black november"` dans `config/fb-rules.json` pour le répondeur automatique Cloud GitHub Actions.
 - **2026-10-15** ([Discussion #1](conversation://347c4a3c-3729-41b8-9897-bf2eaa1ae215)) :
   - **Déploiement en Production du Lot 1 Catalogue sur Grafikaly (29/29 produits mis à jour avec succès)** après validation "GO" :
