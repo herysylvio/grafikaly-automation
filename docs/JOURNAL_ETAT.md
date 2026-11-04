@@ -83,6 +83,11 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
   - Génération du visuel carré Nano Banana ultra-réaliste **Granola AI Business** (`nb-08-granola-ai-business.jpg`) axé prise de notes de réunion automatique par IA, salle de conférence moderne, headline "FINI DE PRENDRE DES NOTES EN RÉUNION" et signature `www.grafikaly.mg`.
   - **Programmation officielle de la publication GRANOLA AI BUSINESS** sur la Page Facebook Grafikaly pour le **Vendredi 23/10/2026 à 09h00 (Heure Mada)** (`Photo/Post ID: 939291282602301_122140246155200124`).
   - Mapping automatique configuré dans `config/fb-rules.json` pour la qualification et réponse automatique aux commentaires/DMs ("GRANOLA", "INFO").
+- **2026-11-04** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - **Lancement officiel de BLACK NOVEMBER** étalé sur 4 semaines thématiques.
+  - Génération du visuel ultra-luxueux **Black November - Semaine 1 Créateurs & IA** (`nb-09-black-november-week1.jpg`) via Nano Banana avec branding 3D or/chrome, split-screen CapCut Pro / Canva Pro, badges en verre dépoli et signature `www.grafikaly.mg`.
+  - **Publication LIVE** sur la Page Facebook Grafikaly (`Photo ID: 122141519613200124`, `Post ID: 939291282602301_122141519649200124`).
+  - Intégration des mots-clés `"black"`, `"black november"` dans `config/fb-rules.json` pour le répondeur automatique Cloud GitHub Actions.
 - **2026-10-15** ([Discussion #1](conversation://347c4a3c-3729-41b8-9897-bf2eaa1ae215)) :
   - **Déploiement en Production du Lot 1 Catalogue sur Grafikaly (29/29 produits mis à jour avec succès)** après validation "GO" :
     - **Activation des codes promo (`promo_code_enabled: true`) sur 100% des produits actifs** : Débloque immédiatement les codes promo (`PANIER10`, `RETOUR10`, `BIENVENUE10`, `NETFLIX15`).

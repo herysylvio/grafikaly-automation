@@ -6,7 +6,8 @@
   "priceKeywords": [
     "prix", "mp", "pv", "inbox", "combien", "ohatrinona", "otrinona", "firy", "info", "infos",
     "detail", "détail", "dispo", "disponible", "mbola misy", "intéressé", "interesse", "mvola",
-    "orange money", "comment acheter", "ahoana", "tarif", "lien", "vidiny", "plan", "crédit", "credit", "abonnement"
+    "orange money", "comment acheter", "ahoana", "tarif", "lien", "vidiny", "plan", "crédit", "credit", "abonnement",
+    "black", "black november", "black friday", "promo", "remise", "reduction"
   ],
   "publicReplyVariants": [
     "Bonjour {{first_name}} 👋 C'est disponible immédiatement ! Je viens de vous envoyer le tarif en Ariary et le lien d'accès direct dans vos messages privés (Messenger) 📩",
@@ -47,6 +48,8 @@
     { "keywords": ["site e-commerce", "site web", "creation de site", "création de site", "boutique en ligne", "vendez sur facebook"], "slug": "service-site-ecommerce" }
   ],
   "postProductMap": {
+    "939291282602301_122141519649200124": "capcut-pro",
+    "122141519613200124": "capcut-pro",
     "939291282602301_122140246155200124": "granola-ai-business",
     "122140246155200124": "granola-ai-business",
     "939291282602301_122139838281200124": "capcut-pro",
