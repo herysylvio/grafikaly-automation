@@ -43,7 +43,9 @@ flowchart TD
 
     subgraph BusinessUnits ["Unités Opérationnelles"]
         BU1["BU 1 : Grafikaly.mg\n(Plateforme e-commerce d'outils digitaux & licences IA)"]
-        BU2["BU 2 : Digital 514 (Incubée)\n(Agence de prestations, marketing digital & services)"]
+        BU2["BU 2 : Digital 514 (Incubée)\n(Agence de prestations, webmarketing & projets)"]
+        SubAIZE["Sous-projet : AIZÉ\n(Plateforme hyperlocale Moramanga)"]
+        BU2 --> SubAIZE
     end
 
     Direction --> SocieteMère
@@ -88,8 +90,8 @@ graph TD
     F2["Sous-Agent Fiscalité & Juridique DGI (IA)"]
     F3["Sous-Agent RH & Social Madagascar (IA)"]
     
-    H1["Stagiaire Administratif Terrain (Humain - Déclenché sur seuil)"]
-    H2["Stagiaires Métiers Digital 514 (Humains - Conventionnés GRAFIKALY)"]
+    H1["Stagiaire Opérationnel & Communication Moramanga (Humain - Binôme Sylvio & Agents IA)"]
+    H2["Stagiaires Métiers / Ambassadeurs AIZÉ & Digital 514 (Humains)"]
 
     CEO --- AD
     AD --> RAF
