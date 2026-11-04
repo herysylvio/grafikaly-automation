@@ -1,59 +1,56 @@
-# 07 — Annonce de Recrutement Facebook : Stagiaire Opérationnel & Marketing Digital (Moramanga)
+# 07 — Annonce de Recrutement Facebook : Collaborateur(trice) Junior & Coaching Digital (Moramanga)
 
 **Canal de diffusion** : Page Facebook officielle & Groupes communautaires de Moramanga  
-**Format** : Publication photo carrée (1080x1080) avec texte engageant  
-**Cible** : Jeunes, étudiants ou profils motivés résidant à Moramanga, à l'aise avec l'outil informatique et internet  
+**Format** : Publication photo carrée (1080x1080) avec texte engageant et anti-bureaucratie  
+**Positionnement** : Collaborateur Junior en devenir, formation et coaching accéléré par le fondateur  
 **Date prévue de publication** : Novembre 2026  
 
 ---
 
-## 1. Texte Officiel de la Publication Facebook (Prêt à publier)
+## 1. Texte Officiel de la Publication Facebook (Version Finale Validée)
 
-📢 **ON RECRUTE À MORAMANGA ! 🚀**  
-**Stage Opérationnel, Communication & Marketing Digital**  
-*(Accompagnement direct par le fondateur + Formation aux outils IA + Opportunité de pré-embauche)*
+```text
+🚀 OPPORTUNITÉ À MORAMANGA : ON CHERCHE NOTRE FUTUR(E) COLLABORATEUR(TRICE) JUNIOR ! 
 
----
+Tu as entre 18 et 26 ans et tu habites à Moramanga ?
+Tu passes ton temps sur ton ordi ou ton smartphone, tu es curieux(se) et tu as envie d'apprendre un vrai métier d'avenir ?
 
-Tu es basé(e) à **Moramanga** ?  
-Tu es passionné(e) par le monde du numérique, curieux(se) des nouvelles technologies et tu passes du temps sur ton ordinateur et les réseaux sociaux ?
+On ne cherche PAS quelqu'un qui veut juste observer ou faire de la figuration. 
+On cherche une personne motivée, active et débrouillarde, prête à être coachée directement par le fondateur pour monter en puissance et exceller dans le digital !
 
-Pour accompagner la croissance de **GRAFIKALY** et de ses projets digitaux (dont la division **Digital 514** et la plateforme locale **AIZÉ**), nous recherchons notre futur(e) **Stagiaire Opérationnel & Communication** !
+🔥 Ce que tu vas faire concrètement avec nous :
+Tu seras le bras droit opérationnel sur le terrain pour nos projets (GRAFIKALY, l'agence Digital 514 et la plateforme locale AIZÉ) :
+- 📦 Suivi et fluidité des commandes : veiller à ce que chaque client reçoive ses accès rapidement.
+- 📱 Communication & réseaux sociaux : gérer le calendrier de publication, animer la page et publier du contenu qui cartonne.
+- 🗓️ Organisation & gestion de projet : tenir les tableaux de bord à jour pour que tout avance sans retard.
+- 🤖 Maîtrise des outils d'Intelligence Artificielle : nous allons te coacher pour apprendre à utiliser l'IA au quotidien (création, productivité, automatisation).
 
----
+🎯 Le profil qu'on recherche :
+- Tu résides à Moramanga.
+- Tu es comme un poisson dans l'eau avec un ordinateur, internet et les réseaux sociaux.
+- Tu as le contact facile, le sens des responsabilités et tu n'attends pas qu'on te pousse pour agir.
+- 💡 Zéro besoin de savoir coder ! Ce qui compte, c'est ton énergie, ton envie d'apprendre et ton sérieux.
 
-### 💼 Ce que tu feras au quotidien avec nous :
-Pas de tâches théoriques ennuyeuses ! Tu seras au cœur de l'action :
-- 📦 **Suivi des commandes & livraisons** : Vérifier sur notre site que les commandes passent bien et aider à la livraison des accès clients.
-- 📱 **Gestion de la communication & réseaux sociaux** : Suivre le calendrier des publications, programmer les posts sur Facebook et animer notre communauté.
-- 🗓️ **Organisation & Plannings** : Gérer les tableaux de bord (Notion), vérifier ce qui est fait et t'assurer que rien ne prend de retard.
-- 🤖 **Collaboration avec l'Intelligence Artificielle** : Apprendre à utiliser les derniers outils IA pour la création de contenu et la productivité.
-
----
-
-### 🎯 Le profil idéal :
-- Tu résides à **Moramanga**.
-- Tu es très à l'aise avec un ordinateur, la navigation sur internet et les réseaux sociaux (Facebook, Messenger, WhatsApp).
-- Tu es sérieux(se), rigoureux(se) et tu as envie d'apprendre vite.
-- 💡 **Aucune compétence en programmation ou développement web n'est requise !** C'est ta motivation, ton sens de l'organisation et ta débrouillardise qui comptent.
-
----
-
-### 🌟 Ce que nous t'offrons :
-- 🎓 **Formation continue & personnalisée** : Tu seras formé(e) et accompagné(e) au quotidien par le fondateur sur les outils digitaux, l'IA et le marketing moderne.
-- ⏰ **Modalités souples & flexibles** : Organisation adaptée discutée ensemble en entretien (possibilité de temps partiel, travail hybride en présentiel et depuis chez toi selon ton rythme).
-- 💰 **Système de primes & commissions motivant** : En plus des modalités de stage convenues, un système d'intéressement sur les résultats et les contrats générés récompensera directement ton travail.
-- 🚀 **Opportunité d'intégration durable** : Ce stage est pensé comme un tremplin direct vers une embauche au sein de l'équipe à part entière !
+🌟 Ce qu'on t'apporte en retour :
+- 🎓 Un véritable coaching individuel quotidien par le fondateur pour faire de toi un(e) pro du digital.
+- ⏰ Une organisation souple et adaptée discutée ensemble (possibilité de rythme partiel et travail à la maison / hybride).
+- 💰 Un système de primes et commissions motivant : tes résultats concrets et ton implication seront directement récompensés.
+- 🚀 Une place dans l'équipe : si tu t'actives et que l'entente est là, l'objectif est de t'intégrer durablement avec nous !
 
 ---
 
-### 📩 Comment postuler ?
-C'est très simple et rapide :
-Envoie-nous un message privé directement ici sur **Messenger** (ou sur WhatsApp au **038 42 080 80**) avec :
-1. Ton nom et ton quartier à Moramanga.
-2. Une courte présentation (ton parcours, ce que tu aimes faire).
-3. Pourquoi cette opportunité te motive.
+🛑 STOP AUX FORMALITÉS INUTILES ! 
+❌ Garde ton CV de 3 pages au placard.
+❌ Épargne-nous la lettre de motivation classique copiée sur Google.
+On ne recrute pas un morceau de papier, on cherche une personnalité ! 
 
-⏳ *Les candidatures sont traitées au fil de l'eau. Premiers arrivés, premiers reçus en entretien !*
+📩 Comment postuler (en 2 minutes chrono) ?
+Envoie-nous un message privé directement ici sur Messenger (ou sur WhatsApp au 038 42 080 80) avec juste 3 choses :
+1. Ton prénom et ton quartier à Moramanga.
+2. Ce qui te passionne le plus dans le monde du numérique.
+3. Pourquoi c'est TOI qu'on doit choisir pour ce coaching.
 
-#Moramanga #RecrutementMoramanga #StageMarketing #DigitalMadagascar #Opportunite #Grafikaly #Digital514
+On démarre dès qu'on trouve la bonne personne ! ⚡
+
+#Moramanga #RecrutementMoramanga #DigitalMadagascar #OpportuniteJeunes #CoachingDigital #Grafikaly #Digital514 #Aize
+```
