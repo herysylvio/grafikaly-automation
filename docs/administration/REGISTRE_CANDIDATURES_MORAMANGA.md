@@ -30,7 +30,7 @@ Quand Sylvio ouvre la nouvelle discussion pour traiter les candidatures entrante
 
 | N° | Date | Prénom & Nom | Quartier (Moramanga) | Canal (FB/WA) | Résumé du Profil & Motivation | Note /20 | Statut | Prochaine Action |
 | :---: | :---: | :--- | :--- | :---: | :--- | :---: | :---: | :--- |
-| **01** | *Exemple* | *Jean-Marc R.* | *Bazar Be* | *Messenger* | *Étudiant gestion, utilise Canva et gère une page locale, très curieux de l'IA.* | *15/20* | *Pré-qualifié* | *Proposer RDV d'échange physique 30 min* |
+| **01** | 05/11/2026 | Antso | Antanamandroso | WhatsApp | Expérience en CM & marketing, création de contenu. Excellente expression, réactive et motivée. | 18/20 | Entretien planifié | Entretien physique mardi 10/11 à 14h30 au Resto Bezanozano |
 | **02** | | | | | | | | |
 | **03** | | | | | | | | |
 | **04** | | | | | | | | |
@@ -42,8 +42,14 @@ Quand Sylvio ouvre la nouvelle discussion pour traiter les candidatures entrante
 
 ## 3. Modèles de Réponses Types Prêtes à l'Emploi pour Messenger / WhatsApp
 
-### Réponse A : Invitation à un Entretien d'Échange (Candidat prometteur)
-> *« Bonjour [Prénom] ! Merci pour ton message et ton intérêt pour l'aventure GRAFIKALY. Ton profil et ta motivation nous plaisent beaucoup. Nous aimerions échanger avec toi pendant une trentaine de minutes à Moramanga pour faire connaissance, te présenter concrètement les projets et voir comment nous pourrions collaborer. Quelles sont tes disponibilités ce [Jour] ou [Jour] ? À très vite ! — Sylvio »*
+### Réponse A : Invitation à la Rencontre & Envoi des Termes de Référence (Candidat prometteur)
+> *« Bonjour [Prénom] ! Merci pour ton message et ton intérêt pour l'aventure GRAFIKALY. Ton profil et ta motivation nous plaisent beaucoup.*
+> 
+> *Avant de nous voir, nous t'avons préparé un petit guide ("Termes de Référence") qui t'explique tout en détail : nos projets, tes missions concrètes, comment fonctionne le coaching et nos valeurs. **Prends le temps de bien le lire calmement, ligne par ligne :** [Lien vers le document ou fichier joint].*
+> 
+> *Surtout, retiens une chose : **détends-toi, sois cool !** Ce n'est pas du tout un entretien formel avec costumes et questions pièges, mais une simple rencontre conviviale autour d'une boisson pour faire connaissance, échanger sur nos motivations mutuelles et voir si le courant passe bien. Viens habillé(e) simplement, comme tous les jours !*
+> 
+> *Quelles sont tes disponibilités pour qu'on se cale un moment ensemble à Moramanga ? À très vite ! — Sylvio »*
 
 ### Réponse B : Demande de Précisions (Message trop court ou incomplet)
 > *« Bonjour [Prénom] ! Merci pour ton message. Pour mieux cerner ton profil, peux-tu nous dire en quelques mots dans quel quartier de Moramanga tu habites et quels sont les outils ou réseaux sur lesquels tu passes le plus de temps ? Merci d'avance ! »*
