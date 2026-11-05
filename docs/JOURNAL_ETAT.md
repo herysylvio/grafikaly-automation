@@ -185,4 +185,18 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
       - Fiche Produit : `https://grafikaly.mg/produit/coursera-plus`
       - Catégorie : `https://grafikaly.mg/boutique?categorie=formation-carriere`
     - **Total catalogue** : **33 produits actifs**.
+- **2026-11-05** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - **Lancement Officiel de l'offre COURSERA PLUS sur Facebook avec code promo exclusif (-10%)** :
+    - **Code promo créé dans Supabase** : `COURSERA10` (ID `f63b33b6-6ce1-43d3-93e4-c9e92ca658b1`), remise de 10% sur Coursera Plus (`5ec44dc5-3162-44fb-9b6b-8be9b3a7c9e0`), strictement limité aux **5 premiers clients** (`max_redemptions: 5`, `once_per_customer: true`).
+    - **Automatisation & Règles Facebook** :
+      - Réactivation de Coursera dans `config/fb-rules.json` (retrait de `stockOverrides`).
+      - Mappage des mots-clés `coursera`, `coursera plus`, `certificat`, `certification` vers le produit `coursera-plus`.
+      - Intégration de la distribution automatique du code promo `COURSERA10` en message privé Messenger dans `src/lib/fb-responder.mjs` pour toute demande d'info / de prix.
+    - **Visuel Publicitaire Nano Banana** : `backups/visuals/nb-10-coursera-plus.jpg` (bureau de direction sombre, certifications Google/Meta/IBM, laptop Coursera Plus, badges authentiques sans fausse réduction exagérée).
+    - **Publication LIVE Facebook réussie** :
+      - Photo ID : `122141727363200124`
+      - Post ID : `939291282602301_122141727399200124`
+      - Copywriting axé opportunités professionnelles internationales, zéro prix et zéro lien externe dans la légende organique, CTA vers commentaire `COURSERA` ou `INFO`.
+      - Mappage du nouveau post ID ajouté dans `config/fb-rules.json`.
+
 

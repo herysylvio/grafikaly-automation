@@ -38,7 +38,7 @@
     { "keywords": ["wispr", "dictée"], "slug": "wispr-flow-pro" },
     { "keywords": ["google ai", "gemini"], "slug": "google-ai-pro" },
     { "keywords": ["stockage google", "google one", "google drive", "stockage saturé"], "slug": "stockage-google-extension" },
-    { "keywords": ["coursera", "certificat"], "slug": "coursera-pro" },
+    { "keywords": ["coursera", "coursera plus", "certificat", "certification"], "slug": "coursera-plus" },
     { "keywords": ["sales navigator"], "slug": "linkedin-sales-navigator-advanced" },
     { "keywords": ["linkedin career"], "slug": "linkedin-premium-career" },
     { "keywords": ["linkedin", "linkedin business"], "slug": "linkedin-premium-business" },
@@ -48,6 +48,8 @@
     { "keywords": ["site e-commerce", "site web", "creation de site", "création de site", "boutique en ligne", "vendez sur facebook"], "slug": "service-site-ecommerce" }
   ],
   "postProductMap": {
+    "939291282602301_122141727399200124": "coursera-plus",
+    "122141727363200124": "coursera-plus",
     "939291282602301_122141520363200124": "capcut-pro",
     "122141520327200124": "capcut-pro",
     "939291282602301_122140246155200124": "granola-ai-business",
@@ -64,7 +66,6 @@
     "939291282602301_122138524743200124": "lovable-pro"
   },
   "stockOverrides": {
-    "coursera-pro": "unavailable",
     "claude-pro-compte-partage": "unavailable",
     "hostinger-business-3-en-1": "unavailable",
     "stockage-google-extension": "unavailable"

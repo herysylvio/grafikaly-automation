@@ -91,6 +91,10 @@ export function buildCommentActions({ comment, product, dryRun = true, variantIn
     ? ` (au lieu de ~${formatMga(product.compare_at_price_mga)} Ar)`
     : '';
 
+  const promoBlock = (product.slug === 'coursera-plus' || product.slug === 'coursera-pro')
+    ? `\n\n🎁 Code Promo (-10%) : COURSERA10\n*(Valable uniquement pour les 5 premiers inscrits !)*`
+    : '';
+
   const cleanUrl = `https://www.grafikaly.mg${basePath}`;
 
   const variants = rules.publicReplyVariants;
@@ -107,7 +111,7 @@ export function buildCommentActions({ comment, product, dryRun = true, variantIn
     privateReply:
       `Bonjour${nameSuffix} 👋\n\n` +
       `Voici les informations pour l'offre ${product.name} :\n\n` +
-      `💰 Tarif : À partir de ${priceStr}${anchorText}\n\n` +
+      `💰 Tarif : À partir de ${priceStr}${anchorText}${promoBlock}\n\n` +
       `🇲🇬 Paiement simple : Mvola ou Orange Money (sans carte bancaire)\n\n` +
       `⚡ ${deliveryText}\n\n` +
       `👉 Découvrir tous les détails et commander :\n` +
