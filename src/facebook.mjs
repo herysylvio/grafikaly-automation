@@ -70,7 +70,11 @@ function loadRealCatalog() {
           is_active: p.is_active,
         };
       });
-      mapped.push(BENCHMARK_CATALOG.find((b) => b.slug === 'service-site-ecommerce'));
+      for (const bench of BENCHMARK_CATALOG) {
+        if (!mapped.some((m) => m && m.slug.toLowerCase() === bench.slug.toLowerCase())) {
+          mapped.push(bench);
+        }
+      }
       return mapped;
     }
   } catch {
@@ -85,7 +89,10 @@ function sleep(ms) {
 
 function findProductBySlug(slug) {
   const catalog = loadRealCatalog();
-  return catalog.find((p) => p.slug.toLowerCase() === String(slug).toLowerCase()) || catalog[0];
+  const found = catalog.find((p) => p && p.slug.toLowerCase() === String(slug).toLowerCase());
+  if (found) return found;
+  const benchFound = BENCHMARK_CATALOG.find((b) => b.slug.toLowerCase() === String(slug).toLowerCase());
+  return benchFound || null;
 }
 
 async function resolvePageSession(cfg) {

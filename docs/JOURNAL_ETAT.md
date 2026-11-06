@@ -205,5 +205,14 @@ Tu peux ouvrir autant de nouvelles discussions que nécessaire dans ce projet (`
       - Post ID : `939291282602301_122141727399200124`
       - Copywriting axé opportunités professionnelles internationales, zéro prix et zéro lien externe dans la légende organique, CTA vers commentaire `COURSERA` ou `INFO`.
       - Mappage du nouveau post ID ajouté dans `config/fb-rules.json`.
+- **2026-11-06** ([Discussion Marketing & FB](conversation://448d6684-25b0-4957-8ba2-b6f812e51e80)) :
+  - **Traitement complet des messages Messenger & commentaires Facebook** :
+    - Snapshot complet frais du catalogue : `backups/2026-11-06T08-10-30-719Z-full-admin-backup.json`.
+    - Correction de `loadRealCatalog()` et `findProductBySlug()` dans `src/facebook.mjs` pour fusionner les ajouts récents (`coursera-plus`) et éviter tout fallback erroné.
+    - **Simienne Louise** : Réponse personnalisée envoyée avec succès sur **Coursera Plus (12 mois)** (`289 000 Ar`) + délivrance du code promo exclusif `COURSERA10` (-10%) + lien direct de commande en Ariary.
+    - **Angelico Dorlys** : Message d'accueil et de qualification envoyé avec succès avec redirection vers la boutique en ligne.
+    - **Haja Ran** : Message bilingue en malgache envoyé avec succès pour qualifier le produit souhaité et lien vers `grafikaly.mg` avec paiement Mvola / Orange Money.
+    - Tous les commentaires sous la publication Coursera Plus ont été répondus publiquement et la boîte Messenger est 100% à jour.
+
 
 
